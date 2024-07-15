@@ -30,6 +30,4 @@ license as a Linux Foundation Project.
    GenAIInfra
    Governance
 
-   genindex
-
 .. _OPEA Project GitHub repo: https://github.com/opea-project
