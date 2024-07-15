@@ -16,8 +16,12 @@ license as a Linux Foundation Project.
    :glob:
 
    Documentation Home <self>
+   README
+   framework
    guide
    community
+   roadmap
+   faq
    release_notes
 
    GenAIComps

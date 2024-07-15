@@ -10,7 +10,7 @@ Generative AI Examples
    GenAIExamples/README
    GenAIExamples/*
    GenAIExamples/*/*
-   GenAIExmaples/*/*/*
-   GenAIExmaples/*/*/*/*
-   GenAIExmaples/*/*/*/*/*
-   GenAIExmaples/*/*/*/*/*/*
+   GenAIExamples/*/*/*
+   GenAIExamples/*/*/*/*
+   GenAIExamples/*/*/*/*/*
+   GenAIExamples/*/*/*/*/*/*
