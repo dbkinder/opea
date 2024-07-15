@@ -1,0 +1,16 @@
+.. _GenAIExamples:
+
+Generative AI Examples
+######################
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   GenAIExamples/README
+   GenAIExamples/*
+   GenAIExamples/*/*
+   GenAIExmaples/*/*/*
+   GenAIExmaples/*/*/*/*
+   GenAIExmaples/*/*/*/*/*
+   GenAIExmaples/*/*/*/*/*/*

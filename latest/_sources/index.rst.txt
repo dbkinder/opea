@@ -1,0 +1,31 @@
+.. _acrn_home:
+
+OPEA Project Documentation
+##########################
+
+Welcome to the OPEA Project (version |version|) documentation published |today|.
+OPEA streamlines implementation of enterprise-grade Generative AI by efficiently
+integrating secure, performant, and cost-effective Generative AI workflows into business value.
+
+Source code for the OPEA Project is maintained in the
+`OPEA Project GitHub repo`_, and is provided under the BSD 2-clause
+license as a Linux Foundation Project.
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   Documentation Home <self>
+   guide
+   community
+   release_notes
+
+   GenAIComps
+   GenAIEval
+   GenAIExamples
+   GenAIInfra
+   Governance
+
+   genindex
+
+.. _OPEA Project GitHub repo: https://github.com/opea-project

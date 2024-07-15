@@ -1,0 +1,11 @@
+.. _rfcs:
+
+Request for Comments (RFCs)
+###########################
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   community/rfcs/README
+   community/rfcs/*

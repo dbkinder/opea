@@ -1,0 +1,17 @@
+.. _GenAIComps:
+
+Generative AI Components
+########################
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   GenAIComps/README
+   GenAIComps/*
+   GenAIComps/*/*
+   GenAIComps/*/*/*
+   GenAIComps/*/*/*/*
+   GenAIComps/*/*/*/*/*
+   GenAIComps/*/*/*/*/*/*
+

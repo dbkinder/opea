@@ -1,0 +1,13 @@
+.. _guide:
+
+Installation Guides
+###################
+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   guide/*
+   guide/*/*
+   guide/*/*/*
