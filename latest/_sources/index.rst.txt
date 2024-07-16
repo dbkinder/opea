@@ -21,7 +21,6 @@ license as a Linux Foundation Project.
    :hidden:
 
    Documentation Home <self>
-   README
    framework
    guide
    community
