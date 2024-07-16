@@ -83,7 +83,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../../index.html">Documentation Home</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../README.html">OPEA Project Important Information</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../../README.html#technical-steering-committee">Technical Steering Committee</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../../README.html#member-companies-at-launch">Member companies at launch:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../README.html#member-companies-at-launch">Member Companies at Launch:</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../framework.html">Open Platform for Enterprise AI (OPEA) Framework Draft Proposal</a><ul>
@@ -707,8 +707,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../ollama/README.html#run-the-ollama-microservice">Run the Ollama Microservice</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ollama/README.html#consume-the-ollama-microservice">Consume the Ollama Microservice</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ray_serve/README.html">Ray-Serve Endpoint Service</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../ray_serve/README.html#getting-started">Getting Started</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../ray_serve/README.html#launch-ray-gaudi-service">Launch Ray Gaudi Service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ray_serve/README.html#set-up-environment-variables">set up environment variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ray_serve/README.html#set-up-ray-serve-service">Set up Ray Serve Service</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ray_serve/README.html#build-docker">Build docker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ray_serve/README.html#launch-ray-serve-service">Launch Ray Serve service</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ray_serve/README.html#query-the-service">Query the service</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ray_serve/README.html#set-up-opea-microservice">Set up OPEA microservice</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ray_serve/README.html#id1">Build docker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ray_serve/README.html#launch-the-microservice">Launch the microservice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ray_serve/README.html#query-the-microservice">Query the microservice</a></li>
 </ul>
 </li>
 </ul>
@@ -745,6 +754,22 @@
 <li class="toctree-l3"><a class="reference internal" href="../vllm-openvino/README.html#use-uint-8-kv-cache-compression">Use UInt-8 KV cache Compression</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../vllm-ray/README.html">VLLM-Ray Endpoint Service</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../vllm-ray/README.html#set-up-environment">Set up environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../vllm-ray/README.html#set-up-vllm-ray-gaudi-service">Set up VLLM Ray Gaudi Service</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../vllm-ray/README.html#build-docker">Build docker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../vllm-ray/README.html#launch-the-service">Launch the service</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../vllm-ray/README.html#query-the-service">Query the service</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../vllm-ray/README.html#set-up-opea-microservice">Set up OPEA microservice</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../vllm-ray/README.html#id1">Build docker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../vllm-ray/README.html#launch-the-microservice">Launch the microservice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../vllm-ray/README.html#query-the-microservice">Query the microservice</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../vllm-xft/README.html">🚀 Start Microservice with Docker</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../vllm-xft/README.html#build-docker-image">1 Build Docker Image</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../vllm-xft/README.html#run-docker-with-cli">2 Run Docker with CLI</a></li>
@@ -756,18 +781,19 @@
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">vLLM Endpoint Serve</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#vllm-on-cpu">vLLM on CPU</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#build-docker">Build docker</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#launch-vllm-service">Launch vLLM service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#set-up-environment-variables">set up environment variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#set-up-vllm-ray-service">Set up VLLM Ray Service</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#vllm-on-cpu">vLLM on CPU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vllm-on-gaudi">vLLM on Gaudi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#query-the-service">Query the service</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#vllm-on-gaudi">vLLM on Gaudi</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id1">Build docker</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#launch-vllm-service-on-single-node">Launch vLLM service on single node</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#launch-vllm-service-on-multiple-nodes">Launch vLLM service on multiple nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#set-up-opea-microservice">Set up OPEA microservice</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Build docker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#launch-the-microservice">Launch the microservice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#query-the-microservice">Query the microservice</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#query-the-service">Query the service</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../utils/lm-eval/README.html">LM-Eval Microservice</a><ul>
@@ -1288,7 +1314,9 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../../GenAIInfra/helm-charts/README.html">Helm charts for deploying GenAIExamples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../../GenAIInfra/kubernetes-addons/README.html">Deploy Kubernetes add-ons for OPEA</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../../GenAIInfra/manifests/README.html">Manifests for deploying GenAIExamples on Kubernetes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../GenAIInfra/manifests/README.html">Deploy On Xeon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../GenAIInfra/manifests/README.html#deploy-on-gaudi">Deploy On Gaudi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../GenAIInfra/manifests/README.html#generate-the-manifest-file-from-helm-chart">Generate the manifest file from helm chart</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../../GenAIInfra/microservices-connector/README.html">genai-microservices-connector(GMC)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../../GenAIInfra/microservices-connector/README.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../../GenAIInfra/microservices-connector/README.html#architecture">Architecture</a></li>
@@ -1339,6 +1367,16 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../../GenAIInfra/manifests/DocSum/README.html#deploy-on-gaudi">Deploy On Gaudi</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../../GenAIInfra/manifests/DocSum/README.html#verify-llm-services">Verify llm Services</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../../GenAIInfra/manifests/DocSum/README.html#generate-the-llm-file-from-helm-chart">Generate the llm file from helm chart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../GenAIInfra/scripts/ray/README.html">Install KubeRay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../GenAIInfra/scripts/ray/README.html#start-ray-cluster-with-autoscaling">Start Ray Cluster with Autoscaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../GenAIInfra/scripts/ray/README.html#delete-ray-cluster-with-autoscaling">Delete Ray Cluster with Autoscaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../GenAIInfra/scripts/ray/README.html#uninstall-kuberay">Uninstall KubeRay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../GenAIInfra/helm-charts/common/asr/README.html">asr</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../GenAIInfra/helm-charts/common/asr/README.html#installing-the-chart">Installing the Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../GenAIInfra/helm-charts/common/asr/README.html#verify">Verify</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../GenAIInfra/helm-charts/common/asr/README.html#values">Values</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../../GenAIInfra/helm-charts/common/data-prep/README.html">data-prep</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../../GenAIInfra/helm-charts/common/data-prep/README.html#installing-the-chart">Installing the Chart</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../../GenAIInfra/helm-charts/common/data-prep/README.html#values">Values</a></li>
@@ -1382,6 +1420,18 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../../GenAIInfra/helm-charts/common/tgi/README.html">tgi</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../../GenAIInfra/helm-charts/common/tgi/README.html#installing-the-chart">Installing the Chart</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../../GenAIInfra/helm-charts/common/tgi/README.html#values">Values</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../GenAIInfra/helm-charts/common/web-retriever/README.html">web-retriever</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../GenAIInfra/helm-charts/common/web-retriever/README.html#installing-the-chart">Installing the Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../GenAIInfra/helm-charts/common/web-retriever/README.html#verify">Verify</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../GenAIInfra/helm-charts/common/web-retriever/README.html#values">Values</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../GenAIInfra/helm-charts/common/whisper/README.html">whisper</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../GenAIInfra/helm-charts/common/whisper/README.html#installing-the-chart">Installing the Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../GenAIInfra/helm-charts/common/whisper/README.html#verify">Verify</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../GenAIInfra/helm-charts/common/whisper/README.html#values">Values</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../../GenAIInfra/manifests/CodeGen/gaudi/README.html">Deploy Services</a></li>
@@ -1456,58 +1506,69 @@
   <section id="vllm-endpoint-serve">
 <h1>vLLM Endpoint Serve<a class="headerlink" href="#vllm-endpoint-serve" title="Link to this heading">¶</a></h1>
 <p><a class="reference external" href="https://github.com/vllm-project/vllm">vLLM</a> is a fast and easy-to-use library for LLM inference and serving, it delivers state-of-the-art serving throughput with a set of advanced features such as PagedAttention, Continuous batching and etc.. Besides GPUs, vLLM already supported <a class="reference external" href="https://www.intel.com/content/www/us/en/products/overview.html">Intel CPUs</a> and <a class="reference external" href="https://habana.ai/products">Gaudi accelerators</a>. This guide provides an example on how to launch vLLM serving endpoint on CPU and Gaudi accelerators.</p>
+<section id="set-up-environment-variables">
+<h2>set up environment variables<a class="headerlink" href="#set-up-environment-variables" title="Link to this heading">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">HUGGINGFACEHUB_API_TOKEN</span><span class="o">=</span>&lt;token&gt;
+<span class="nb">export</span><span class="w"> </span><span class="nv">vLLM_ENDPOINT</span><span class="o">=</span><span class="s2">&quot;http://</span><span class="si">${</span><span class="nv">your_ip</span><span class="si">}</span><span class="s2">:8008&quot;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">LLM_MODEL</span><span class="o">=</span><span class="s2">&quot;meta-llama/Meta-Llama-3-8B-Instruct&quot;</span>
+</pre></div>
+</div>
+<p>For gated models such as <code class="docutils literal notranslate"><span class="pre">LLAMA-2</span></code>, you will have to pass the environment HUGGINGFACEHUB_API_TOKEN. Please follow this link <a class="reference external" href="https://huggingface.co/docs/hub/security-tokens">huggingface token</a> to get the access token and export <code class="docutils literal notranslate"><span class="pre">HUGGINGFACEHUB_API_TOKEN</span></code> environment with the token.</p>
+</section>
+<section id="set-up-vllm-ray-service">
+<h2>Set up VLLM Ray Service<a class="headerlink" href="#set-up-vllm-ray-service" title="Link to this heading">¶</a></h2>
 <section id="vllm-on-cpu">
-<h2>vLLM on CPU<a class="headerlink" href="#vllm-on-cpu" title="Link to this heading">¶</a></h2>
+<h3>vLLM on CPU<a class="headerlink" href="#vllm-on-cpu" title="Link to this heading">¶</a></h3>
 <p>First let’s enable VLLM on CPU.</p>
 <section id="build-docker">
-<h3>Build docker<a class="headerlink" href="#build-docker" title="Link to this heading">¶</a></h3>
+<h4>Build docker<a class="headerlink" href="#build-docker" title="Link to this heading">¶</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>./build_docker_vllm.sh
 </pre></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">build_docker_vllm</span></code> accepts one parameter <code class="docutils literal notranslate"><span class="pre">hw_mode</span></code> to specify the hardware mode of the service, with the default being <code class="docutils literal notranslate"><span class="pre">cpu</span></code>, and the optional selection can be <code class="docutils literal notranslate"><span class="pre">hpu</span></code>.</p>
 </section>
 <section id="launch-vllm-service">
-<h3>Launch vLLM service<a class="headerlink" href="#launch-vllm-service" title="Link to this heading">¶</a></h3>
+<h4>Launch vLLM service<a class="headerlink" href="#launch-vllm-service" title="Link to this heading">¶</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>./launch_vllm_service.sh
 </pre></div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">launch_vllm_service.sh</span></code> script accepts four parameters:</p>
-<ul class="simple">
-<li><p>port_number: The port number assigned to the vLLM CPU endpoint, with the default being 8008.</p></li>
-<li><p>model_name: The model name utilized for LLM, with the default set to ‘meta-llama/Meta-Llama-3-8B-Instruct’.</p></li>
-<li><p>hw_mode: The hardware mode utilized for LLM, with the default set to “cpu”, and the optional selection can be “hpu”.</p></li>
-<li><p>parallel_number: parallel nodes number for ‘hpu’ mode</p></li>
-</ul>
 <p>If you want to customize the port or model_name, can run:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>./launch_vllm_service.sh<span class="w"> </span><span class="si">${</span><span class="nv">port_number</span><span class="si">}</span><span class="w"> </span><span class="si">${</span><span class="nv">model_name</span><span class="si">}</span>
-</pre></div>
-</div>
-<p>For gated models such as <code class="docutils literal notranslate"><span class="pre">LLAMA-2</span></code>, you will have to pass the environment HUGGINGFACEHUB_API_TOKEN. Please follow this link <a class="reference external" href="https://huggingface.co/docs/hub/security-tokens">huggingface token</a> to get the access token and export <code class="docutils literal notranslate"><span class="pre">HUGGINGFACEHUB_API_TOKEN</span></code> environment with the token.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">HUGGINGFACEHUB_API_TOKEN</span><span class="o">=</span>&lt;token&gt;
 </pre></div>
 </div>
 </section>
 </section>
 <section id="vllm-on-gaudi">
-<h2>vLLM on Gaudi<a class="headerlink" href="#vllm-on-gaudi" title="Link to this heading">¶</a></h2>
+<h3>vLLM on Gaudi<a class="headerlink" href="#vllm-on-gaudi" title="Link to this heading">¶</a></h3>
 <p>Then we show how to enable VLLM on Gaudi.</p>
 <section id="id1">
-<h3>Build docker<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
+<h4>Build docker<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>./build_docker_vllm.sh<span class="w"> </span>hpu
 </pre></div>
 </div>
 <p>Set <code class="docutils literal notranslate"><span class="pre">hw_mode</span></code> to <code class="docutils literal notranslate"><span class="pre">hpu</span></code>.</p>
 </section>
 <section id="launch-vllm-service-on-single-node">
-<h3>Launch vLLM service on single node<a class="headerlink" href="#launch-vllm-service-on-single-node" title="Link to this heading">¶</a></h3>
+<h4>Launch vLLM service on single node<a class="headerlink" href="#launch-vllm-service-on-single-node" title="Link to this heading">¶</a></h4>
 <p>For small model, we can just use single node.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>./launch_vllm_service.sh<span class="w"> </span><span class="si">${</span><span class="nv">port_number</span><span class="si">}</span><span class="w"> </span><span class="si">${</span><span class="nv">model_name</span><span class="si">}</span><span class="w"> </span>hpu<span class="w"> </span><span class="m">1</span>
 </pre></div>
 </div>
 <p>Set <code class="docutils literal notranslate"><span class="pre">hw_mode</span></code> to <code class="docutils literal notranslate"><span class="pre">hpu</span></code> and <code class="docutils literal notranslate"><span class="pre">parallel_number</span></code> to 1.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">launch_vllm_service.sh</span></code> script accepts 7 parameters:</p>
+<ul class="simple">
+<li><p>port_number: The port number assigned to the vLLM CPU endpoint, with the default being 8008.</p></li>
+<li><p>model_name: The model name utilized for LLM, with the default set to ‘meta-llama/Meta-Llama-3-8B-Instruct’.</p></li>
+<li><p>hw_mode: The hardware mode utilized for LLM, with the default set to “cpu”, and the optional selection can be “hpu”.</p></li>
+<li><p>parallel_number: parallel nodes number for ‘hpu’ mode</p></li>
+<li><p>block_size: default set to 128 for better performance on HPU</p></li>
+<li><p>max_num_seqs: default set to 256 for better performance on HPU</p></li>
+<li><p>max_seq_len_to_capture: default set to 2048 for better performance on HPU</p></li>
+</ul>
+<p>If you want to get more performance tuning tips, can refer to <a class="reference external" href="https://github.com/HabanaAI/vllm-fork/blob/habana_main/README_GAUDI.md#performance-tips">Performance tuning</a>.</p>
 </section>
 <section id="launch-vllm-service-on-multiple-nodes">
-<h3>Launch vLLM service on multiple nodes<a class="headerlink" href="#launch-vllm-service-on-multiple-nodes" title="Link to this heading">¶</a></h3>
+<h4>Launch vLLM service on multiple nodes<a class="headerlink" href="#launch-vllm-service-on-multiple-nodes" title="Link to this heading">¶</a></h4>
 <p>For large model such as <code class="docutils literal notranslate"><span class="pre">meta-llama/Meta-Llama-3-70b</span></code>, we need to launch on multiple nodes.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>./launch_vllm_service.sh<span class="w"> </span><span class="si">${</span><span class="nv">port_number</span><span class="si">}</span><span class="w"> </span><span class="si">${</span><span class="nv">model_name</span><span class="si">}</span><span class="w"> </span>hpu<span class="w"> </span><span class="si">${</span><span class="nv">parallel_number</span><span class="si">}</span>
 </pre></div>
@@ -1519,18 +1580,44 @@
 </section>
 </section>
 <section id="query-the-service">
-<h2>Query the service<a class="headerlink" href="#query-the-service" title="Link to this heading">¶</a></h2>
+<h3>Query the service<a class="headerlink" href="#query-the-service" title="Link to this heading">¶</a></h3>
 <p>And then you can make requests like below to check the service status:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>http://127.0.0.1:8008/v1/completions<span class="w"> </span><span class="se">\</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>http://<span class="si">${</span><span class="nv">your_ip</span><span class="si">}</span>:8008/v1/completions<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
-<span class="s1">  &quot;model&quot;: &lt;model_name&gt;,</span>
+<span class="s1">  &quot;model&quot;: &quot;meta-llama/Meta-Llama-3-8B-Instruct&quot;,</span>
 <span class="s1">  &quot;prompt&quot;: &quot;What is Deep Learning?&quot;,</span>
 <span class="s1">  &quot;max_tokens&quot;: 32,</span>
 <span class="s1">  &quot;temperature&quot;: 0</span>
 <span class="s1">  }&#39;</span>
 </pre></div>
 </div>
+</section>
+</section>
+<section id="set-up-opea-microservice">
+<h2>Set up OPEA microservice<a class="headerlink" href="#set-up-opea-microservice" title="Link to this heading">¶</a></h2>
+<p>Then we warp the VLLM service into OPEA microcervice.</p>
+<section id="id2">
+<h3>Build docker<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>build_docker_microservice.sh
+</pre></div>
+</div>
+</section>
+<section id="launch-the-microservice">
+<h3>Launch the microservice<a class="headerlink" href="#launch-the-microservice" title="Link to this heading">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>launch_microservice.sh
+</pre></div>
+</div>
+</section>
+<section id="query-the-microservice">
+<h3>Query the microservice<a class="headerlink" href="#query-the-microservice" title="Link to this heading">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>http://<span class="si">${</span><span class="nv">your_ip</span><span class="si">}</span>:9000/v1/chat/completions<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;query&quot;:&quot;What is Deep Learning?&quot;,&quot;max_new_tokens&quot;:17,&quot;top_p&quot;:0.95,&quot;temperature&quot;:0.01,&quot;streaming&quot;:false}&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="err">&#39;</span>Content-Type:<span class="w"> </span>application/json
+</pre></div>
+</div>
+</section>
 </section>
 </section>
 
@@ -1548,8 +1635,8 @@
   <div role="contentinfo">
     <p>&#169; Copyright 2024-2024 OPEA™, a Series of LF Projects, LLC.
 
-<!-- span class="lastupdated">Last updated on Jul 15, 2024. Published on </span -->
-<span class="lastupdated">Published on Jul 15, 2024.</span>
+<!-- span class="lastupdated">Last updated on Jul 16, 2024. Published on </span -->
+<span class="lastupdated">Published on Jul 16, 2024.</span>
 
   </div>
 

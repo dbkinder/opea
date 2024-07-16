@@ -23,7 +23,7 @@ Check out the [LF AI & Data Press Release](https://lfaidata.foundation/blog/2024
 Name | Title | Company
 --- | --- | ---
 Ke Ding |Senior Prinicipal AI Engineer | Intel
-Malini Bhandaru | :Senior Principal Engineer | Intel
+Malini Bhandaru | Senior Principal Engineer | Intel
 Amr Abdelhalem | SVP, Head of Cloud Platforms | Fidelity
 Robert Hafner | Senior Prinicipal Architect | Comcast
 Steven Grubb | Senior Principal Engineer | Red Hat
@@ -31,7 +31,7 @@ Nathan Cartwright | Chief Architect - AI | CDW
 Logan Markewich | Founding Software Developer | LlamaIndex
 Justin Cormack | CTO | Docker
 
-## Member companies at launch:
+## Member Companies at Launch:
 
 * Anyscale
 * Cloudera
