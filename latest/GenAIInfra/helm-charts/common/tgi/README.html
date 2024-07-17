@@ -26,7 +26,7 @@
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="web-retriever" href="../web-retriever/README.html" />
+    <link rel="next" title="tts" href="../tts/README.html" />
     <link rel="prev" title="teirerank" href="../teirerank/README.html" /> 
 </head>
 
@@ -1387,8 +1387,9 @@
 <li class="toctree-l3"><a class="reference internal" href="../llm-uservice/README.html#values">Values</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../redis-vector-db/README.html">tei</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../redis-vector-db/README.html#installing-the-chart">Installing the Chart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../redis-vector-db/README.html">redis-vector-db</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../redis-vector-db/README.html#install-the-chart">Install the Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../redis-vector-db/README.html#verify">Verify</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../redis-vector-db/README.html#values">Values</a></li>
 </ul>
 </li>
@@ -1402,19 +1403,34 @@
 <li class="toctree-l3"><a class="reference internal" href="../retriever-usvc/README.html#values">Values</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../speecht5/README.html">speecht5</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../speecht5/README.html#installing-the-chart">Installing the Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../speecht5/README.html#verify">Verify</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../speecht5/README.html#values">Values</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../tei/README.html">tei</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../tei/README.html#installing-the-chart">Installing the Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tei/README.html#verify">Verify</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tei/README.html#values">Values</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../teirerank/README.html">teirerank</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../teirerank/README.html#installing-the-chart">Installing the Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../teirerank/README.html#verify">Verify</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../teirerank/README.html#values">Values</a></li>
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">tgi</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#installing-the-chart">Installing the Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#verify">Verify</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#values">Values</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tts/README.html">tts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tts/README.html#installing-the-chart">Installing the Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tts/README.html#verify">Verify</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tts/README.html#values">Values</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../web-retriever/README.html">web-retriever</a><ul>
@@ -1436,11 +1452,6 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../Governance.html">Project Governance</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../../Governance/Technical%20Steering%20Committee%20%28TSC%29%20Gives%20%26%20Gets.html">Technical Steering Committee (TSC) Gives &amp; Gets</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../Governance/Technical%20Steering%20Committee%20%28TSC%29%20Gives%20%26%20Gets.html#tsc-member-gives">TSC Member Gives</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../Governance/Technical%20Steering%20Committee%20%28TSC%29%20Gives%20%26%20Gets.html#tsc-member-gets">TSC Member Gets</a></li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../Governance/charter.html">Technical Charter (the “Charter”) for OPEA a Series of LF Projects, LLC</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../Governance/charter.html#mission-and-scope-of-the-project">1. Mission and Scope of the Project</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../Governance/charter.html#technical-steering-committee">2. Technical Steering Committee</a></li>
@@ -1515,8 +1526,20 @@
 </div>
 <p>By default, the tgi service will downloading the “bigscience/bloom-560m” which is about 1.1GB.</p>
 <p>If you already cached the model locally, you can pass it to container like this example:</p>
-<p>MODELDIR=/home/ubuntu/hfmodels</p>
+<p>MODELDIR=/mnt/opea-models</p>
 <p>MODELNAME=”/data/models–bigscience–bloom-560m”</p>
+</section>
+<section id="verify">
+<h2>Verify<a class="headerlink" href="#verify" title="Link to this heading">¶</a></h2>
+<p>To verify the installation, run the command <code class="docutils literal notranslate"><span class="pre">kubectl</span> <span class="pre">get</span> <span class="pre">pod</span></code> to make sure all pods are runinng.</p>
+<p>Then run the command <code class="docutils literal notranslate"><span class="pre">kubectl</span> <span class="pre">port-forward</span> <span class="pre">svc/tgi</span> <span class="pre">2080:80</span></code> to expose the tgi service for access.</p>
+<p>Open another terminal and run the following command to verify the service if working:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">curl http://localhost:2080/generate \</span>
+<span class="go">    -X POST \</span>
+<span class="go">    -d &#39;{&quot;inputs&quot;:&quot;What is Deep Learning?&quot;,&quot;parameters&quot;:{&quot;max_new_tokens&quot;:17, &quot;do_sample&quot;: true}}&#39; \</span>
+<span class="go">    -H &#39;Content-Type: application/json&#39;</span>
+</pre></div>
+</div>
 </section>
 <section id="values">
 <h2>Values<a class="headerlink" href="#values" title="Link to this heading">¶</a></h2>
@@ -1534,15 +1557,15 @@
 <td><p><code class="docutils literal notranslate"><span class="pre">&quot;bigscience/bloom-560m&quot;</span></code></p></td>
 <td><p>Models id from https://huggingface.co/, or predownloaded model directory</p></td>
 </tr>
-<tr class="row-odd"><td><p>port</p></td>
+<tr class="row-odd"><td><p>global.HUGGINGFACEHUB_API_TOKEN</p></td>
 <td><p>string</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">2080</span></code></p></td>
-<td><p>Hugging Face Text Generation Inference service port</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">insert-your-huggingface-token-here</span></code></p></td>
+<td><p>Hugging Face API token</p></td>
 </tr>
 <tr class="row-even"><td><p>global.modelUseHostPath</p></td>
 <td><p>string</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">&quot;/mnt/opea-models&quot;</span></code></p></td>
-<td><p>Cached models directory, tgi will not download if the model is cached here. The host path “modelUseHostPath” will be mounted to container as /data directory</p></td>
+<td><p>Cached models directory, tgi will not download if the model is cached here. The host path “modelUseHostPath” will be mounted to container as /data directory. Set this to null/empty will force it to download model.</p></td>
 </tr>
 <tr class="row-odd"><td><p>image.repository</p></td>
 <td><p>string</p></td>
@@ -1565,7 +1588,7 @@
 
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../teirerank/README.html" class="btn btn-neutral float-left" title="teirerank" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../web-retriever/README.html" class="btn btn-neutral float-right" title="web-retriever" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../tts/README.html" class="btn btn-neutral float-right" title="tts" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -1573,8 +1596,8 @@
   <div role="contentinfo">
     <p>&#169; Copyright 2024-2024 OPEA™, a Series of LF Projects, LLC.
 
-<!-- span class="lastupdated">Last updated on Jul 16, 2024. Published on </span -->
-<span class="lastupdated">Published on Jul 16, 2024.</span>
+<!-- span class="lastupdated">Last updated on Jul 17, 2024. Published on </span -->
+<span class="lastupdated">Published on Jul 17, 2024.</span>
 
   </div>
 
