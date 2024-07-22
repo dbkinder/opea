@@ -290,7 +290,7 @@
 <li class="toctree-l3"><a class="reference internal" href="release_notes/v0.7.html#genaiinfra">GenAIInfra</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="release_notes/v0.6.html">OPEA Release Notes v0.06</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="release_notes/v0.6.html">OPEA Release Notes v0.6</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="release_notes/v0.6.html#opea-highlight">OPEA Highlight</a></li>
 <li class="toctree-l3"><a class="reference internal" href="release_notes/v0.6.html#genaiexamples">GenAIExamples</a></li>
 <li class="toctree-l3"><a class="reference internal" href="release_notes/v0.6.html#genaicomps">GenAIComps</a></li>
@@ -524,6 +524,19 @@
 <li class="toctree-l2"><a class="reference internal" href="GenAIComps/comps/vectorstores/README.html#vectorstores-microservice-with-qdrant">Vectorstores Microservice with Qdrant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="GenAIComps/comps/vectorstores/README.html#vectorstores-microservice-with-pgvector">Vectorstores Microservice with PGVector</a></li>
 <li class="toctree-l2"><a class="reference internal" href="GenAIComps/comps/vectorstores/README.html#vectorstores-microservice-with-pinecone">Vectorstores Microservice with Pinecone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GenAIComps/comps/agent/langchain/README.html">langchain Agent Microservice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GenAIComps/comps/agent/langchain/README.html#start-microservice-with-python-option-1">🚀1. Start Microservice with Python（Option 1）</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="GenAIComps/comps/agent/langchain/README.html#install-requirements">1.1 Install Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIComps/comps/agent/langchain/README.html#start-microservice-with-python-script">1.2 Start Microservice with Python Script</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="GenAIComps/comps/agent/langchain/README.html#start-microservice-with-docker-option-2">🚀2. Start Microservice with Docker (Option 2)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="GenAIComps/comps/agent/langchain/README.html#build-microservices">Build Microservices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIComps/comps/agent/langchain/README.html#start-microservices">start microservices</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="GenAIComps/comps/agent/langchain/README.html#validate-microservice">🚀3. Validate Microservice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GenAIComps/comps/agent/langchain/README.html#provide-your-own-tools">🚀4. Provide your own tools</a></li>
 <li class="toctree-l2"><a class="reference internal" href="GenAIComps/comps/dataprep/milvus/README.html">Dataprep Microservice with Milvus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="GenAIComps/comps/dataprep/milvus/README.html#start-microservice-with-python">🚀Start Microservice with Python</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="GenAIComps/comps/dataprep/milvus/README.html#install-requirements">Install Requirements</a></li>
@@ -1008,6 +1021,7 @@
 <li class="toctree-l2"><a class="reference internal" href="GenAIExamples.html#chatqna-application">ChatQnA Application</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="GenAIExamples/ChatQnA/README.html">ChatQnA Application</a></li>
 <li class="toctree-l3"><a class="reference internal" href="GenAIExamples/ChatQnA/README.html#deploy-chatqna-service">Deploy ChatQnA Service</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/ChatQnA/README.html#setup-environment-variable">Setup Environment Variable</a></li>
 <li class="toctree-l4"><a class="reference internal" href="GenAIExamples/ChatQnA/README.html#deploy-chatqna-on-gaudi">Deploy ChatQnA on Gaudi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="GenAIExamples/ChatQnA/README.html#deploy-chatqna-on-xeon">Deploy ChatQnA on Xeon</a></li>
 <li class="toctree-l4"><a class="reference internal" href="GenAIExamples/ChatQnA/README.html#deploy-chatqna-on-nvidia-gpu">Deploy ChatQnA on NVIDIA GPU</a></li>
@@ -1015,6 +1029,8 @@
 <li class="toctree-l4"><a class="reference internal" href="GenAIExamples/ChatQnA/README.html#deploy-chatqna-on-ai-pc">Deploy ChatQnA on AI PC</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIExamples/ChatQnA/README.html#consume-chatqna-service">Consume ChatQnA Service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIExamples/ChatQnA/README.html#troubleshooting">Troubleshooting</a></li>
 <li class="toctree-l3"><a class="reference internal" href="GenAIExamples/ChatQnA/deprecated/README.html">ChatQnA Application</a></li>
 <li class="toctree-l3"><a class="reference internal" href="GenAIExamples/ChatQnA/deprecated/README.html#solution-overview">Solution Overview</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="GenAIExamples/ChatQnA/deprecated/README.html#in-intel-gaudi2-platform">In Intel Gaudi2 Platform</a></li>
@@ -1101,10 +1117,13 @@
 <li class="toctree-l2"><a class="reference internal" href="GenAIExamples.html#code-generation-application">Code Generation Application</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="GenAIExamples/CodeGen/README.html">Code Generation Application</a></li>
 <li class="toctree-l3"><a class="reference internal" href="GenAIExamples/CodeGen/README.html#deploy-codegen-service">Deploy CodeGen Service</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/CodeGen/README.html#setup-environment-variable">Setup Environment Variable</a></li>
 <li class="toctree-l4"><a class="reference internal" href="GenAIExamples/CodeGen/README.html#deploy-codegen-using-docker">Deploy CodeGen using Docker</a></li>
 <li class="toctree-l4"><a class="reference internal" href="GenAIExamples/CodeGen/README.html#deploy-codegen-using-kubernetes">Deploy CodeGen using Kubernetes</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIExamples/CodeGen/README.html#consume-codegen-service">Consume CodeGen Service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIExamples/CodeGen/README.html#troubleshooting">Troubleshooting</a></li>
 <li class="toctree-l3"><a class="reference internal" href="GenAIExamples/CodeGen/deprecated/README.html">Code Generation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="GenAIExamples/CodeGen/deprecated/README.html#environment-setup">Environment Setup</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="GenAIExamples/CodeGen/deprecated/README.html#prepare-gaudi-image">Prepare Gaudi Image</a></li>
@@ -1151,10 +1170,13 @@
 <li class="toctree-l2"><a class="reference internal" href="GenAIExamples.html#code-translation-application">Code Translation Application</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="GenAIExamples/CodeTrans/README.html">Code Translation Application</a></li>
 <li class="toctree-l3"><a class="reference internal" href="GenAIExamples/CodeTrans/README.html#deploy-code-translation-service">Deploy Code Translation Service</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/CodeTrans/README.html#setup-environment-variable">Setup Environment Variable</a></li>
 <li class="toctree-l4"><a class="reference internal" href="GenAIExamples/CodeTrans/README.html#deploy-with-docker">Deploy with Docker</a></li>
 <li class="toctree-l4"><a class="reference internal" href="GenAIExamples/CodeTrans/README.html#deploy-with-kubernetes">Deploy with Kubernetes</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIExamples/CodeTrans/README.html#consume-code-translation-service">Consume Code Translation Service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIExamples/CodeTrans/README.html#troubleshooting">Troubleshooting</a></li>
 <li class="toctree-l3"><a class="reference internal" href="GenAIExamples/CodeTrans/deprecated/README.html">Code Translation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="GenAIExamples/CodeTrans/deprecated/README.html#start-backend-service">Start Backend Service</a></li>
 <li class="toctree-l3"><a class="reference internal" href="GenAIExamples/CodeTrans/kubernetes/README.html">Deploy the RAG application</a></li>
@@ -1178,10 +1200,13 @@
 <li class="toctree-l2"><a class="reference internal" href="GenAIExamples.html#document-summarization-application">Document Summarization Application</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="GenAIExamples/DocSum/README.html">Document Summarization Application</a></li>
 <li class="toctree-l3"><a class="reference internal" href="GenAIExamples/DocSum/README.html#deploy-document-summarization-service">Deploy Document Summarization Service</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/DocSum/README.html#setup-environment-variable">Setup Environment Variable</a></li>
 <li class="toctree-l4"><a class="reference internal" href="GenAIExamples/DocSum/README.html#deploy-using-docker">Deploy using Docker</a></li>
 <li class="toctree-l4"><a class="reference internal" href="GenAIExamples/DocSum/README.html#deploy-using-kubernetes">Deploy using Kubernetes</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIExamples/DocSum/README.html#consume-document-summarization-service">Consume Document Summarization Service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIExamples/DocSum/README.html#troubleshooting">Troubleshooting</a></li>
 <li class="toctree-l3"><a class="reference internal" href="GenAIExamples/DocSum/deprecated/README.html">Document Summarization</a></li>
 <li class="toctree-l3"><a class="reference internal" href="GenAIExamples/DocSum/deprecated/README.html#environment-setup">Environment Setup</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="GenAIExamples/DocSum/deprecated/README.html#build-tgi-gaudi-docker-image">Build TGI Gaudi Docker Image</a></li>
@@ -1217,10 +1242,13 @@
 <li class="toctree-l2"><a class="reference internal" href="GenAIExamples.html#searchqna-application">SearchQnA Application</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="GenAIExamples/SearchQnA/README.html">SearchQnA Application</a></li>
 <li class="toctree-l3"><a class="reference internal" href="GenAIExamples/SearchQnA/README.html#deploy-searchqna-service">Deploy SearchQnA Service</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/SearchQnA/README.html#deploy-searchqna-on-xeon">Deploy SearchQnA on Xeon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/SearchQnA/README.html#setup-environment-variable">Setup Environment Variable</a></li>
 <li class="toctree-l4"><a class="reference internal" href="GenAIExamples/SearchQnA/README.html#deploy-searchqna-on-gaudi">Deploy SearchQnA on Gaudi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/SearchQnA/README.html#deploy-searchqna-on-xeon">Deploy SearchQnA on Xeon</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIExamples/SearchQnA/README.html#consume-searchqna-service">Consume SearchQnA Service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIExamples/SearchQnA/README.html#troubleshooting">Troubleshooting</a></li>
 <li class="toctree-l3"><a class="reference internal" href="GenAIExamples/SearchQnA/deprecated/README.html">Search Question and Answering</a></li>
 <li class="toctree-l3"><a class="reference internal" href="GenAIExamples/SearchQnA/deprecated/README.html#start-backend-service">Start Backend Service</a></li>
 <li class="toctree-l3"><a class="reference internal" href="GenAIExamples/SearchQnA/deprecated/README.html#start-frontend-gui">Start Frontend GUI</a></li>
@@ -1287,6 +1315,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="GenAIInfra/README.html#usages">Usages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="GenAIInfra/README.html#use-genai-microservices-connector-gmc-to-deploy-and-adjust-genaiexamples">Use GenAI Microservices Connector (GMC) to deploy and adjust GenAIExamples</a></li>
 <li class="toctree-l4"><a class="reference internal" href="GenAIInfra/README.html#use-helm-charts-to-deploy">Use helm charts to deploy</a></li>
 <li class="toctree-l4"><a class="reference internal" href="GenAIInfra/README.html#use-manifests-to-deploy">Use manifests to deploy</a></li>
 </ul>
@@ -1327,17 +1356,38 @@
 <li class="toctree-l2"><a class="reference internal" href="GenAIInfra/microservices-connector/usage_guide.html">Usage guide for genai-microservices-connector(GMC)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="GenAIInfra/microservices-connector/usage_guide.html#use-gmc-to-compose-a-chatqna-pipeline">Use GMC to compose a chatQnA Pipeline</a></li>
 <li class="toctree-l3"><a class="reference internal" href="GenAIInfra/microservices-connector/usage_guide.html#use-gmc-to-adjust-the-chatqna-pipeline">Use GMC to adjust the chatQnA Pipeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/microservices-connector/usage_guide.html#use-gmc-and-istio-to-compose-an-opea-pipeline-with-authentication-and-authorization-enabled">Use GMC and Istio to compose an OPEA Pipeline with authentication and authorization enabled</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="GenAIInfra/scripts/README.html">Scripts and tools</a></li>
 <li class="toctree-l2"><a class="reference internal" href="GenAIInfra/helm-charts/chatqna/README.html">ChatQnA</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/chatqna/README.html#installing-the-chart">Installing the Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/chatqna/README.html#installing-the-chart">Installing the Chart</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="GenAIInfra/helm-charts/chatqna/README.html#important-note">IMPORTANT NOTE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/chatqna/README.html#verify">Verify</a></li>
 <li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/chatqna/README.html#values">Values</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="GenAIInfra/helm-charts/codegen/README.html">CodeGen</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/codegen/README.html#installing-the-chart">Installing the Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/codegen/README.html#installing-the-chart">Installing the Chart</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="GenAIInfra/helm-charts/codegen/README.html#important-note">IMPORTANT NOTE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/codegen/README.html#verify">Verify</a></li>
 <li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/codegen/README.html#values">Values</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="GenAIInfra/helm-charts/codetrans/README.html">CodeTrans</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/codetrans/README.html#installing-the-chart">Installing the Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/codetrans/README.html#verify">Verify</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/codetrans/README.html#values">Values</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="GenAIInfra/helm-charts/docsum/README.html">DocSum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/docsum/README.html#installing-the-chart">Installing the Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/docsum/README.html#verify">Verify</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/docsum/README.html#values">Values</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="GenAIInfra/manifests/ChatQnA/README.html">Prebuilt images</a></li>
@@ -1365,7 +1415,8 @@
 <li class="toctree-l2"><a class="reference internal" href="GenAIInfra/scripts/ray/README.html#delete-ray-cluster-with-autoscaling">Delete Ray Cluster with Autoscaling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="GenAIInfra/scripts/ray/README.html#uninstall-kuberay">Uninstall KubeRay</a></li>
 <li class="toctree-l2"><a class="reference internal" href="GenAIInfra/helm-charts/common/asr/README.html">asr</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/common/asr/README.html#installing-the-chart">Installing the Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/common/asr/README.html#option1-installing-the-chart-separately">(Option1): Installing the chart separately:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/common/asr/README.html#option2-installing-the-chart-with-dependencies-automatically">(Option2): Installing the chart with dependencies automatically:</a></li>
 <li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/common/asr/README.html#verify">Verify</a></li>
 <li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/common/asr/README.html#values">Values</a></li>
 </ul>
@@ -1376,12 +1427,16 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="GenAIInfra/helm-charts/common/embedding-usvc/README.html">embedding-usvc</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/common/embedding-usvc/README.html#installing-the-chart">Installing the Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/common/embedding-usvc/README.html#option1-installing-the-chart-separately">(Option1): Installing the chart separately:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/common/embedding-usvc/README.html#option2-installing-the-chart-with-dependencies-automatically">(Option2): Installing the chart with dependencies automatically:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/common/embedding-usvc/README.html#verify">Verify</a></li>
 <li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/common/embedding-usvc/README.html#values">Values</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="GenAIInfra/helm-charts/common/llm-uservice/README.html">llm-uservice</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/common/llm-uservice/README.html#installing-the-chart">Installing the Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/common/llm-uservice/README.html#option1-installing-the-chart-separately">(Option1): Installing the chart separately:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/common/llm-uservice/README.html#option2-installing-the-chart-with-dependencies-automatically">(Option2): Installing the chart with dependencies automatically:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/common/llm-uservice/README.html#verify">Verify</a></li>
 <li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/common/llm-uservice/README.html#values">Values</a></li>
 </ul>
 </li>
@@ -1392,12 +1447,16 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="GenAIInfra/helm-charts/common/reranking-usvc/README.html">reranking-usvc</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/common/reranking-usvc/README.html#installing-the-chart">Installing the Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/common/reranking-usvc/README.html#option1-installing-the-chart-separately">(Option1): Installing the chart separately:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/common/reranking-usvc/README.html#option2-installing-the-chart-with-dependencies-automatically">(Option2): Installing the chart with dependencies automatically:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/common/reranking-usvc/README.html#verify">Verify</a></li>
 <li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/common/reranking-usvc/README.html#values">Values</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="GenAIInfra/helm-charts/common/retriever-usvc/README.html">retriever-usvc</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/common/retriever-usvc/README.html#installing-the-chart">Installing the Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/common/retriever-usvc/README.html#option1-installing-the-chart-separately">(Option1): Installing the chart separately:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/common/retriever-usvc/README.html#option2-installing-the-chart-with-dependencies-automatically">(Option2): Installing the chart with dependencies automatically:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/common/retriever-usvc/README.html#verify">Verify</a></li>
 <li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/common/retriever-usvc/README.html#values">Values</a></li>
 </ul>
 </li>
@@ -1426,13 +1485,15 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="GenAIInfra/helm-charts/common/tts/README.html">tts</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/common/tts/README.html#installing-the-chart">Installing the Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/common/tts/README.html#option1-installing-the-chart-separately">(Option1): Installing the chart separately:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/common/tts/README.html#option2-installing-the-chart-with-dependencies-automatically">(Option2): Installing the chart with dependencies automatically:</a></li>
 <li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/common/tts/README.html#verify">Verify</a></li>
 <li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/common/tts/README.html#values">Values</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="GenAIInfra/helm-charts/common/web-retriever/README.html">web-retriever</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/common/web-retriever/README.html#installing-the-chart">Installing the Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/common/web-retriever/README.html#option1-installing-the-chart-separately">(Option1): Installing the chart separately:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/common/web-retriever/README.html#option2-installing-the-chart-with-dependencies-automatically">(Option2): Installing the chart with dependencies automatically:</a></li>
 <li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/common/web-retriever/README.html#verify">Verify</a></li>
 <li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/common/web-retriever/README.html#values">Values</a></li>
 </ul>
@@ -1447,6 +1508,11 @@
 <li class="toctree-l2"><a class="reference internal" href="GenAIInfra/manifests/CodeGen/gaudi/README.html#verify-services">Verify Services</a></li>
 <li class="toctree-l2"><a class="reference internal" href="GenAIInfra/manifests/CodeGen/xeon/README.html">Deploy Services</a></li>
 <li class="toctree-l2"><a class="reference internal" href="GenAIInfra/manifests/CodeGen/xeon/README.html#verify-services">Verify Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GenAIInfra/microservices-connector/config/authN-authZ/README.html">Use GMC and Istio to compose an OPEA Pipeline with authentication and authorization enabled</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/microservices-connector/config/authN-authZ/README.html#prerequisite">Prerequisite</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/microservices-connector/config/authN-authZ/README.html#perform-authentication-and-authorization-via-bearer-jwt-tokens">Perform authentication and authorization via bearer JWT tokens</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Governance.html">Project Governance</a><ul>
@@ -1601,8 +1667,8 @@
   <div role="contentinfo">
     <p>&#169; Copyright 2024-2024 OPEA™, a Series of LF Projects, LLC.
 
-<!-- span class="lastupdated">Last updated on Jul 17, 2024. Published on </span -->
-<span class="lastupdated">Published on Jul 17, 2024.</span>
+<!-- span class="lastupdated">Last updated on Jul 22, 2024. Published on </span -->
+<span class="lastupdated">Published on Jul 22, 2024.</span>
 
   </div>
 

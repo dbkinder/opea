@@ -1,4 +1,4 @@
-# OPEA Release Notes v0.06
+# OPEA Release Notes v0.6
 
 ## OPEA Highlight
 
