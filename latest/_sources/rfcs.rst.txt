@@ -3,9 +3,15 @@
 Request for Comments (RFCs)
 ###########################
 
+.. include:: community/rfcs/README.md
+   :parser: myst_parser.sphinx_
+   :start-after: # RFC Archive
+
+_____
+
 .. toctree::
    :maxdepth: 1
    :glob:
 
-   community/rfcs/README
-   community/rfcs/*
+   community/rfcs/2*
+   community/rfcs/rfc_template
