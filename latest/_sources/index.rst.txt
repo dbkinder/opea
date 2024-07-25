@@ -17,21 +17,37 @@ license as a Linux Foundation Project.
 
 .. toctree::
    :maxdepth: 1
-   :glob:
    :hidden:
 
    Documentation Home <self>
+
+.. toctree::
+   :caption: ABOUT
+   :maxdepth: 1
+   :hidden:
+
    framework
    guide
-   community
-   roadmap
    faq
    release_notes
 
+.. toctree::
+   :caption: COMPONENTS
+   :maxdepth: 1
+   :hidden:
+
+   GenAIExamples
    GenAIComps
    GenAIEval
-   GenAIExamples
    GenAIInfra
+
+.. toctree::
+   :caption: COMMUNITY
+   :maxdepth: 1
+   :hidden:
+
+   community
+   roadmap
    Governance
 
 .. _OPEA Project GitHub repo: https://github.com/opea-project

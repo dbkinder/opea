@@ -44,9 +44,9 @@ NOTE: Please make sure you configure the appropriate container runtime based on 
 
 ### Use GenAI Microservices Connector (GMC) to deploy and adjust GenAIExamples
 
-Follow [GMC README](https://github.com/opea-project/GenAIInfra/blob/main/microservices-connector/README.md)
+Follow [GMC README](/GenAIInfra/microservices-connector/README.md)
 to install GMC into your kubernetes cluster. [GenAIExamples](https://github.com/opea-project/GenAIExamples) contains several sample GenAI example use case pipelines such as ChatQnA, DocSum, etc.
-Once you have deployed GMC in your Kubernetes cluster, you can deploy any of the example pipelines by following its Readme file (e.g. [Docsum](https://github.com/opea-project/GenAIExamples/blob/main/DocSum/kubernetes/README.md)).
+Once you have deployed GMC in your Kubernetes cluster, you can deploy any of the example pipelines by following its Readme file (e.g. [Docsum](/GenAIExamples/DocSum/kubernetes/README.md)).
 
 ### Use helm charts to deploy
 
@@ -84,7 +84,7 @@ kubectl apply -f ./DocSum/manifests/
 
 ## Additional Content
 
-- [Code of Conduct](https://github.com/opea-project/docs/tree/main/community/CODE_OF_CONDUCT.md)
-- [Contribution](https://github.com/opea-project/docs/tree/main/community/CONTRIBUTING.md)
-- [Security Policy](https://github.com/opea-project/docs/tree/main/community/SECURITY.md)
+- [Code of Conduct](/community/CODE_OF_CONDUCT.md)
+- [Contribution](/community/CONTRIBUTING.md)
+- [Security Policy](/community/SECURITY.md)
 - [Legal Information](/LEGAL_INFORMATION.md)

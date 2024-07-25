@@ -20,7 +20,7 @@ For Gaudi:
 - tgi-service: ghcr.io/huggingface/tgi-gaudi:1.2.1
 
 > [NOTE]  
-> Please refer README [for Xeon](https://github.com/opea-project/GenAIExamples/blob/main/ChatQnA/docker-composer/xeon/README.md) and [for Gaudi](https://github.com/opea-project/GenAIExamples/blob/main/ChatQnA/docker-composer/gaudi/README.md) to build the opea images
+> Please refer README [for Xeon](/GenAIExamples/ChatQnA/docker-composer/xeon/README.md) and [for Gaudi](/GenAIExamples/ChatQnA/docker-composer/gaudi/README.md) to build the opea images
 
 ## Deploy Services with Xeon
 

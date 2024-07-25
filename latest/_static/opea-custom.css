@@ -77,6 +77,14 @@ div.non-compliant-code div.highlight {
     color: rgba(255,255,255,1);
 }
 
+/* left-nav colors */
+.wy-menu-vertical p.caption {
+    color: #FF6900 !important;
+    font-size: 100% !important;
+    margin: 0.5em 0 0.5em 0 !important;
+    padding: 0 0 0 0.5em !important;
+}
+
 /* squish the space between a paragraph before a list but not in a note */
 div:not(.admonition) > p + ul, div:not(.admonition) > p + ol {
    margin-top: -20px;
@@ -308,7 +316,7 @@ img.drop-shadow {
 
 /* colors from ACRN brand pallet */
 .bg-opea-darkorange{
-    background-color: #006368;
+    background-color: #FF6900;
     color: white;
 }
 .bg-opea-lightorange {

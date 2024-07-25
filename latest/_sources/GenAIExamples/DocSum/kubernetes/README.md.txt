@@ -12,8 +12,8 @@ the image ghcr.io/huggingface/text-generation-inference:1.4. The service is call
 service tgi-gaudi-svc, which uses the image ghcr.io/huggingface/tgi-gaudi:1.2.1. Both TGI model services serve the model specified in the LLM_MODEL_ID variable that is exported by you. In the below example we use Intel/neural-chat-7b-v3-3.
 
 [NOTE]
-Please refer to [Docker Xeon README](https://github.com/opea-project/GenAIExamples/blob/main/DocSum/docker/xeon/README.md) or
-[Docker Gaudi README](https://github.com/opea-project/GenAIExamples/blob/main/DocSum/docker/gaudi/README.md) to build the OPEA images. 
+Please refer to [Docker Xeon README](/GenAIExamples/DocSum/docker/xeon/README.md) or
+[Docker Gaudi README](/GenAIExamples/DocSum/docker/gaudi/README.md) to build the OPEA images. 
 These will be available on Docker Hub soon, simplifying installation.
 
 ## Deploy the RAG pipeline
