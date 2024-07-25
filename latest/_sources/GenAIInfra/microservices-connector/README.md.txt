@@ -20,8 +20,8 @@ Istio Service Mesh can also be leveraged to facilicate communication between mic
 
 ## Getting Started
 
-**CRD** defines are at config/crd/bases/  
-**API** is api/v1alpha3/  
+**CRD** defines are at config/crd/bases/
+**API** is api/v1alpha3/
 **Controller** is at internal/controller
 
 ### Prerequisites
@@ -75,9 +75,7 @@ kubectl apply -f config/crd/bases/gmc.opea.io_gmconnectors.yaml
 
 ```sh
 mkdir -p $(pwd)/config/manifests
-cp $(dirname $(pwd))/manifests/ChatQnA/*.yaml -p $(pwd)/config/manifests/
-cp $(dirname $(pwd))/manifests/DocSum/xeon/docsum_llm.yaml $(pwd)/config/manifests/
-cp $(dirname $(pwd))/manifests/DocSum/gaudi/docsum_gaudi_llm.yaml $(pwd)/config/manifests/
+cp $(dirname $(pwd))/manifests/common/*.yaml -p $(pwd)/config/manifests/
 ```
 
 **Copy GMC router manifest**
@@ -86,6 +84,20 @@ cp $(dirname $(pwd))/manifests/DocSum/gaudi/docsum_gaudi_llm.yaml $(pwd)/config/
 cp $(pwd)/config/gmcrouter/gmc-router.yaml -p $(pwd)/config/manifests/
 ```
 
+**NOTE:**
+before apply the manifests, please replace your own huggingface tokens in the manifests
+
+```sh
+find . -name '*.yaml' -type f -exec sed -i "s#insert-your-huggingface-token-here#$YOURTOKEN#g" {} \;
+```
+
+if you have pre-defined directory to save the models on you cluster hosts, please set the path to the manifests
+
+```sh
+find . -name '*.yaml' -type f -exec sed -i "s#path: /mnt/opea-models#path: $MOUNT_DIR#g" {} \;
+```
+
+**Create Namespace for gmcmanager deployment**
 \*\*Create Namespace for gmcmanager deployment
 
 ```sh

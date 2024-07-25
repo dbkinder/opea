@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Deploy the RAG application &mdash; OPEA™ 0.7 documentation</title>
+  <title>Deploy CodeTrans in a Kubernetes Cluster &mdash; OPEA™ 0.7 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=fd3f3429" />
@@ -241,7 +241,12 @@
 <li class="toctree-l4"><a class="reference internal" href="../../AudioQnA/docker/xeon/README.html#test-megaservice">🚀 Test MegaService</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../AudioQnA/docker/ui/svelte/README.html">📸 Project Screenshots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../AudioQnA/docker/ui/svelte/README.html">AudioQnA</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../AudioQnA/docker/ui/svelte/README.html#project-screenshots">📸 Project Screenshots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../AudioQnA/docker/ui/svelte/README.html#features">🧐 Features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../AudioQnA/docker/ui/svelte/README.html#get-it-running">🛠️ Get it Running</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../GenAIExamples.html#chatqna-application">ChatQnA Application</a><ul>
@@ -251,12 +256,19 @@
 <li class="toctree-l4"><a class="reference internal" href="../../ChatQnA/README.html#deploy-chatqna-on-gaudi">Deploy ChatQnA on Gaudi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../ChatQnA/README.html#deploy-chatqna-on-xeon">Deploy ChatQnA on Xeon</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../ChatQnA/README.html#deploy-chatqna-on-nvidia-gpu">Deploy ChatQnA on NVIDIA GPU</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../ChatQnA/README.html#deploy-chatqna-into-kubernetes-on-xeon-gaudi">Deploy ChatQnA into Kubernetes on Xeon &amp; Gaudi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ChatQnA/README.html#deploy-chatqna-into-kubernetes-on-xeon-gaudi-with-gmc">Deploy ChatQnA into Kubernetes on Xeon &amp; Gaudi with GMC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ChatQnA/README.html#deploy-chatqna-into-kubernetes-on-xeon-gaudi-without-gmc">Deploy ChatQnA into Kubernetes on Xeon &amp; Gaudi without GMC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ChatQnA/README.html#deploy-chatqna-into-kubernetes-using-helm-chart">Deploy ChatQnA into Kubernetes using Helm Chart</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../ChatQnA/README.html#deploy-chatqna-on-ai-pc">Deploy ChatQnA on AI PC</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../ChatQnA/README.html#consume-chatqna-service">Consume ChatQnA Service</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../ChatQnA/README.html#troubleshooting">Troubleshooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ChatQnA/kubernetes/README.html">Deploy ChatQnA in Kubernetes Cluster on Xeon and Gaudi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../ChatQnA/kubernetes/README.html#using-prebuilt-images">Using prebuilt images</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ChatQnA/kubernetes/README.html#deploy-chatqna-pipeline">Deploy ChatQnA pipeline</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../../ChatQnA/docker/aipc/README.html">Build Mega Service of ChatQnA on AIPC</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../ChatQnA/docker/aipc/README.html#build-docker-images">🚀 Build Docker Images</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../ChatQnA/docker/aipc/README.html#start-microservices">🚀 Start Microservices</a></li>
@@ -291,13 +303,36 @@
 <li class="toctree-l4"><a class="reference internal" href="../../ChatQnA/docker/xeon/README.html#start-microservices">🚀 Start Microservices</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../ChatQnA/docker/xeon/README.html#enable-langsmith-for-monotoring-application-optional">Enable LangSmith for Monotoring Application (Optional)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../ChatQnA/docker/xeon/README.html#launch-the-ui">🚀 Launch the UI</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../ChatQnA/docker/xeon/README.html#launch-the-conversational-ui-react">🚀 Launch the Conversational UI (react)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ChatQnA/docker/xeon/README.html#launch-the-conversational-ui-optional">🚀 Launch the Conversational UI (Optional)</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../ChatQnA/kubernetes/manifests/README.html">Using prebuilt images</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../ChatQnA/kubernetes/manifests/README.html#deploy-chatqna-pipeline">Deploy ChatQnA pipeline</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../ChatQnA/docker/ui/react/README.html">📸 Project Screenshots</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../ChatQnA/docker/ui/svelte/README.html">📸 Project Screenshots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ChatQnA/docker/xeon/README_qdrant.html">Build Mega Service of ChatQnA (with Qdrant) on Xeon</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../ChatQnA/docker/xeon/README_qdrant.html#apply-xeon-server-on-aws">🚀 Apply Xeon Server on AWS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ChatQnA/docker/xeon/README_qdrant.html#build-docker-images">🚀 Build Docker Images</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ChatQnA/docker/xeon/README_qdrant.html#start-microservices">🚀 Start Microservices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ChatQnA/docker/xeon/README_qdrant.html#enable-langsmith-for-monotoring-application-optional">Enable LangSmith for Monotoring Application (Optional)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ChatQnA/docker/xeon/README_qdrant.html#launch-the-ui">🚀 Launch the UI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ChatQnA/docker/xeon/README_qdrant.html#launch-the-conversational-ui-react">🚀 Launch the Conversational UI (react)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../ChatQnA/kubernetes/manifests/README.html">Deploy ChatQnA in Kubernetes Cluster</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../ChatQnA/kubernetes/manifests/README.html#deploy-on-xeon">Deploy On Xeon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ChatQnA/kubernetes/manifests/README.html#deploy-on-gaudi">Deploy On Gaudi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ChatQnA/kubernetes/manifests/README.html#verify-services">Verify Services</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../ChatQnA/docker/ui/react/README.html">ChatQnA Conversational UI</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../ChatQnA/docker/ui/react/README.html#project-screenshots">📸 Project Screenshots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ChatQnA/docker/ui/react/README.html#features">🧐 Features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ChatQnA/docker/ui/react/README.html#get-it-running">🛠️ Get it Running</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../ChatQnA/docker/ui/svelte/README.html">ChatQnA Customized UI</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../ChatQnA/docker/ui/svelte/README.html#project-screenshots">📸 Project Screenshots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ChatQnA/docker/ui/svelte/README.html#features">🧐 Features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ChatQnA/docker/ui/svelte/README.html#get-it-running">🛠️ Get it Running</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../GenAIExamples.html#code-generation-application">Code Generation Application</a><ul>
@@ -306,15 +341,21 @@
 <li class="toctree-l4"><a class="reference internal" href="../../CodeGen/README.html#setup-environment-variable">Setup Environment Variable</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../CodeGen/README.html#deploy-codegen-using-docker">Deploy CodeGen using Docker</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../CodeGen/README.html#deploy-codegen-using-kubernetes">Deploy CodeGen using Kubernetes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../CodeGen/README.html#deploy-codegen-into-kubernetes-using-helm-chart">Deploy CodeGen into Kubernetes using Helm Chart</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../CodeGen/README.html#consume-codegen-service">Consume CodeGen Service</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../CodeGen/README.html#troubleshooting">Troubleshooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../CodeGen/kubernetes/README.html">Deploy CodeGen in a Kubernetes Cluster</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../CodeGen/kubernetes/README.html#deploy-the-rag-application">Deploy the RAG application</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../../CodeGen/docker/gaudi/README.html">Build MegaService of CodeGen on Gaudi</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../CodeGen/docker/gaudi/README.html#build-docker-images">🚀 Build Docker Images</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../CodeGen/docker/gaudi/README.html#start-microservices-and-megaservice">🚀 Start MicroServices and MegaService</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../CodeGen/docker/gaudi/README.html#enable-langsmith-to-monitor-application-optional">Enable LangSmith to Monitor Application (Optional)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../CodeGen/docker/gaudi/README.html#launch-the-ui">🚀 Launch the UI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../CodeGen/docker/gaudi/README.html#launch-the-svelte-based-ui">🚀 Launch the Svelte Based UI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../CodeGen/docker/gaudi/README.html#launch-the-react-based-ui">🚀 Launch the React Based UI</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../CodeGen/docker/gaudi/README.html#install-copilot-vscode-extension-from-plugin-marketplace-as-the-frontend">Install Copilot VSCode extension from Plugin Marketplace as the frontend</a></li>
 </ul>
 </li>
@@ -324,13 +365,28 @@
 <li class="toctree-l4"><a class="reference internal" href="../../CodeGen/docker/xeon/README.html#start-microservices-and-megaservice">🚀 Start Microservices and MegaService</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../CodeGen/docker/xeon/README.html#enable-langsmith-for-monitoring-application-optional">Enable LangSmith for Monitoring Application (Optional)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../CodeGen/docker/xeon/README.html#launch-the-ui">🚀 Launch the UI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../CodeGen/docker/xeon/README.html#launch-the-react-based-ui">🚀 Launch the React Based UI</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../CodeGen/docker/xeon/README.html#install-copilot-vscode-extension-from-plugin-marketplace-as-the-frontend">Install Copilot VSCode extension from Plugin Marketplace as the frontend</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../CodeGen/kubernetes/manifests/README.html">Deploy On Xeon</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../CodeGen/kubernetes/manifests/README.html#deploy-on-gaudi">Deploy On Gaudi</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../CodeGen/kubernetes/manifests/README.html#verify-services">Verify Services</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../CodeGen/docker/ui/svelte/README.html">📸 Project Screenshots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../CodeGen/kubernetes/manifests/README.html">Deploy CodeGen in Kubernetes Cluster</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../CodeGen/kubernetes/manifests/README.html#deploy-on-xeon">Deploy On Xeon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../CodeGen/kubernetes/manifests/README.html#deploy-on-gaudi">Deploy On Gaudi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../CodeGen/kubernetes/manifests/README.html#verify-services">Verify Services</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../CodeGen/docker/ui/react/README.html">Code Gen</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../CodeGen/docker/ui/react/README.html#project-screenshots">📸 Project Screenshots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../CodeGen/docker/ui/react/README.html#features">🧐 Features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../CodeGen/docker/ui/react/README.html#get-it-running">🛠️ Get it Running</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../CodeGen/docker/ui/svelte/README.html">Code Gen</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../CodeGen/docker/ui/svelte/README.html#project-screenshots">📸 Project Screenshots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../CodeGen/docker/ui/svelte/README.html#features">🧐 Features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../CodeGen/docker/ui/svelte/README.html#get-it-running">🛠️ Get it Running</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../../GenAIExamples.html#code-translation-application">Code Translation Application</a><ul class="current">
@@ -338,12 +394,17 @@
 <li class="toctree-l3"><a class="reference internal" href="../README.html#deploy-code-translation-service">Deploy Code Translation Service</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../README.html#setup-environment-variable">Setup Environment Variable</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../README.html#deploy-with-docker">Deploy with Docker</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../README.html#deploy-with-kubernetes">Deploy with Kubernetes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../README.html#deploy-using-kubernetes-with-gmc">Deploy using Kubernetes with GMC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../README.html#deploy-using-kubernetes-without-gmc">Deploy using Kubernetes without GMC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../README.html#deploy-codetrans-into-kubernetes-using-helm-chart">Deploy CodeTrans into Kubernetes using Helm Chart</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../README.html#consume-code-translation-service">Consume Code Translation Service</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../README.html#troubleshooting">Troubleshooting</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Deploy the RAG application</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Deploy CodeTrans in a Kubernetes Cluster</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#deploy-the-rag-application">Deploy the RAG application</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../docker/gaudi/README.html">Build Mega Service of CodeTrans on Gaudi</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../docker/gaudi/README.html#build-docker-images">🚀 Build Docker Images</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../docker/gaudi/README.html#start-microservices">🚀 Start Microservices</a></li>
@@ -358,7 +419,18 @@
 <li class="toctree-l4"><a class="reference internal" href="../docker/xeon/README.html#enable-langsmith-to-monitor-an-application-optional">Enable LangSmith to Monitor an Application (Optional)</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../docker/ui/svelte/README.html">📸 Project Screenshots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="manifests/README.html">Deploy CodeTrans in Kubernetes Cluster</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="manifests/README.html#deploy-on-xeon">Deploy On Xeon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manifests/README.html#deploy-on-gaudi">Deploy On Gaudi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manifests/README.html#verify-services">Verify Services</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../docker/ui/svelte/README.html">Code Translation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../docker/ui/svelte/README.html#project-screenshots">📸 Project Screenshots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../docker/ui/svelte/README.html#features">🧐 Features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../docker/ui/svelte/README.html#get-it-running">🛠️ Get it Running</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../GenAIExamples.html#document-summarization-application">Document Summarization Application</a><ul>
@@ -366,12 +438,17 @@
 <li class="toctree-l3"><a class="reference internal" href="../../DocSum/README.html#deploy-document-summarization-service">Deploy Document Summarization Service</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../DocSum/README.html#setup-environment-variable">Setup Environment Variable</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../DocSum/README.html#deploy-using-docker">Deploy using Docker</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../DocSum/README.html#deploy-using-kubernetes">Deploy using Kubernetes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../DocSum/README.html#deploy-using-kubernetes-with-gmc">Deploy using Kubernetes with GMC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../DocSum/README.html#deploy-using-kubernetes-without-gmc">Deploy using Kubernetes without GMC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../DocSum/README.html#deploy-docsum-into-kubernetes-using-helm-chart">Deploy DocSum into Kubernetes using Helm Chart</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../DocSum/README.html#consume-document-summarization-service">Consume Document Summarization Service</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../DocSum/README.html#troubleshooting">Troubleshooting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../DocSum/kubernetes/README.html">Deploy the RAG pipeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../DocSum/kubernetes/README.html">Deploy DocSum in Kubernetes Cluster</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../DocSum/kubernetes/README.html#deploy-the-rag-pipeline">Deploy the RAG pipeline</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../../DocSum/docker/gaudi/README.html">Build MegaService of Document Summarization on Gaudi</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../DocSum/docker/gaudi/README.html#build-docker-images">🚀 Build Docker Images</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../DocSum/docker/gaudi/README.html#start-microservices-and-megaservice">🚀 Start Microservices and MegaService</a></li>
@@ -387,7 +464,18 @@
 <li class="toctree-l4"><a class="reference internal" href="../../DocSum/docker/xeon/README.html#launch-the-ui">🚀 Launch the UI</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../DocSum/docker/ui/svelte/README.html">📸 Project Screenshots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../DocSum/kubernetes/manifests/README.html">Deploy DocSum in Kubernetes Cluster</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../DocSum/kubernetes/manifests/README.html#deploy-on-xeon">Deploy On Xeon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../DocSum/kubernetes/manifests/README.html#deploy-on-gaudi">Deploy On Gaudi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../DocSum/kubernetes/manifests/README.html#verify-services">Verify Services</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../DocSum/docker/ui/svelte/README.html">Doc Summary</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../DocSum/docker/ui/svelte/README.html#project-screenshots">📸 Project Screenshots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../DocSum/docker/ui/svelte/README.html#features">🧐 Features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../DocSum/docker/ui/svelte/README.html#get-it-running">🛠️ Get it Running</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../GenAIExamples.html#searchqna-application">SearchQnA Application</a><ul>
@@ -400,6 +488,10 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../SearchQnA/README.html#consume-searchqna-service">Consume SearchQnA Service</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../SearchQnA/README.html#troubleshooting">Troubleshooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../SearchQnA/kubernetes/README.html">Deploy SearchQnA in a Kubernetes Cluster</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../SearchQnA/kubernetes/README.html#deploy-the-rag-application">Deploy the RAG application</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../../SearchQnA/docker/gaudi/README.html">Build Mega Service of SearchQnA on Gaudi</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../SearchQnA/docker/gaudi/README.html#build-docker-images">🚀 Build Docker Images</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../SearchQnA/docker/gaudi/README.html#set-the-environment-variables">🚀 Set the environment variables</a></li>
@@ -416,7 +508,12 @@
 <li class="toctree-l4"><a class="reference internal" href="../../SearchQnA/docker/xeon/README.html#test-megaservice">🚀 Test MegaService</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../SearchQnA/docker/ui/svelte/README.html">📸 Project Screenshots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../SearchQnA/docker/ui/svelte/README.html">Neural Chat</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../SearchQnA/docker/ui/svelte/README.html#project-screenshots">📸 Project Screenshots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../SearchQnA/docker/ui/svelte/README.html#features">🧐 Features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../SearchQnA/docker/ui/svelte/README.html#get-it-running">🛠️ Get it Running</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../GenAIExamples.html#translation-application">Translation Application</a><ul>
@@ -424,6 +521,10 @@
 <li class="toctree-l3"><a class="reference internal" href="../../Translation/README.html#deploy-translation-service">Deploy Translation Service</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Translation/README.html#deploy-translation-on-gaudi">Deploy Translation on Gaudi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Translation/README.html#deploy-translation-on-xeon">Deploy Translation on Xeon</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Translation/kubernetes/README.html">Deploy Translation in a Kubernetes Cluster</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Translation/kubernetes/README.html#deploy-the-rag-application">Deploy the RAG application</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../Translation/docker/gaudi/README.html">Build MegaService of Translation on Gaudi</a><ul>
@@ -439,7 +540,12 @@
 <li class="toctree-l4"><a class="reference internal" href="../../Translation/docker/xeon/README.html#launch-the-ui">🚀 Launch the UI</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../Translation/docker/ui/svelte/README.html">📸 Project Screenshots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Translation/docker/ui/svelte/README.html">Language Translation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Translation/docker/ui/svelte/README.html#project-screenshots">📸 Project Screenshots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Translation/docker/ui/svelte/README.html#features">🧐 Features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Translation/docker/ui/svelte/README.html#get-it-running">🛠️ Get it Running</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../GenAIExamples.html#visualqna-application">VisualQnA Application</a><ul>
@@ -1168,9 +1274,12 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../GenAIInfra/helm-charts/README.html">Helm charts for deploying GenAIExamples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../GenAIInfra/kubernetes-addons/README.html">Deploy Kubernetes add-ons for OPEA</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../GenAIInfra/manifests/README.html">Deploy On Xeon</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../GenAIInfra/manifests/README.html#deploy-on-gaudi">Deploy On Gaudi</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../GenAIInfra/manifests/README.html#generate-the-manifest-file-from-helm-chart">Generate the manifest file from helm chart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../GenAIInfra/manifests/README.html">Kubernetes manifests for GenAIComps</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../GenAIInfra/manifests/README.html#deploy-on-xeon">Deploy On Xeon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../GenAIInfra/manifests/README.html#deploy-on-gaudi">Deploy On Gaudi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../GenAIInfra/manifests/README.html#generate-the-manifest-file-from-helm-chart">Generate the manifest file from helm chart</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../../GenAIInfra/microservices-connector/README.html">genai-microservices-connector(GMC)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../GenAIInfra/microservices-connector/README.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../GenAIInfra/microservices-connector/README.html#architecture">Architecture</a></li>
@@ -1222,30 +1331,42 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../GenAIInfra/helm-charts/docsum/README.html#values">Values</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../GenAIInfra/manifests/ChatQnA/README.html">Prebuilt images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../GenAIInfra/manifests/ChatQnA/README.html#deploy-services-with-xeon">Deploy Services with Xeon</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../GenAIInfra/manifests/ChatQnA/README.html#deploy">Deploy</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../GenAIInfra/manifests/ChatQnA/README.html#undeploy">Undeploy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../GenAIInfra/manifests/ChatQnA/README.html">Deploy ChatQnA in Kubernetes Cluster on Xeon</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../GenAIInfra/manifests/ChatQnA/README.html#prebuilt-images">Prebuilt images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../GenAIInfra/manifests/ChatQnA/README.html#deploy-services-with-xeon">Deploy Services with Xeon</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../GenAIInfra/manifests/ChatQnA/README.html#deploy">Deploy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GenAIInfra/manifests/ChatQnA/README.html#undeploy">Undeploy</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../GenAIInfra/manifests/ChatQnA/README.html#deploy-services-with-gaudi">Deploy Services with Gaudi</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../GenAIInfra/manifests/ChatQnA/README.html#id1">Deploy</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../GenAIInfra/manifests/ChatQnA/README.html#id2">Undeploy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../GenAIInfra/manifests/ChatQnA/README.html#deploy-services-with-gaudi">Deploy Services with Gaudi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../GenAIInfra/manifests/ChatQnA/README.html#id1">Deploy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../GenAIInfra/manifests/ChatQnA/README.html#id2">Undeploy</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../GenAIInfra/manifests/ChatQnA/README.html#verify-services">Verify Services</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../GenAIInfra/manifests/CodeTrans/README.html">Deploy On Xeon</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../GenAIInfra/manifests/CodeTrans/README.html#deploy-on-gaudi">Deploy On Gaudi</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../GenAIInfra/manifests/CodeTrans/README.html#verify-llm-services">Verify llm Services</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../GenAIInfra/manifests/CodeTrans/README.html#generate-the-llm-file-from-helm-chart">Generate the llm file from helm chart</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../GenAIInfra/manifests/DocSum/README.html">Deploy On Xeon</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../GenAIInfra/manifests/DocSum/README.html#deploy-on-gaudi">Deploy On Gaudi</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../GenAIInfra/manifests/DocSum/README.html#verify-llm-services">Verify llm Services</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../GenAIInfra/manifests/DocSum/README.html#generate-the-llm-file-from-helm-chart">Generate the llm file from helm chart</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../GenAIInfra/scripts/ray/README.html">Install KubeRay</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../GenAIInfra/scripts/ray/README.html#start-ray-cluster-with-autoscaling">Start Ray Cluster with Autoscaling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../GenAIInfra/scripts/ray/README.html#delete-ray-cluster-with-autoscaling">Delete Ray Cluster with Autoscaling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../GenAIInfra/scripts/ray/README.html#uninstall-kuberay">Uninstall KubeRay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../GenAIInfra/manifests/ChatQnA/README.html#verify-services">Verify Services</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../GenAIInfra/manifests/CodeTrans/README.html">Deploy CodeTrans llm-uservice in Kubernetes Cluster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../GenAIInfra/manifests/CodeTrans/README.html#deploy-on-xeon">Deploy On Xeon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../GenAIInfra/manifests/CodeTrans/README.html#deploy-on-gaudi">Deploy On Gaudi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../GenAIInfra/manifests/CodeTrans/README.html#verify-llm-services">Verify llm Services</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../GenAIInfra/manifests/CodeTrans/README.html#generate-the-llm-file-from-helm-chart">Generate the llm file from helm chart</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../GenAIInfra/manifests/DocSum/README.html">Deploy DocSum llm-uservice in Kubernetes Cluster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../GenAIInfra/manifests/DocSum/README.html#deploy-on-xeon">Deploy On Xeon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../GenAIInfra/manifests/DocSum/README.html#deploy-on-gaudi">Deploy On Gaudi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../GenAIInfra/manifests/DocSum/README.html#verify-llm-services">Verify llm Services</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../GenAIInfra/manifests/DocSum/README.html#generate-the-llm-file-from-helm-chart">Generate the llm file from helm chart</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../GenAIInfra/scripts/ray/README.html">Deploy Autoscaling Ray Cluster with KubeRay in Kubernetes Cluster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../GenAIInfra/scripts/ray/README.html#install-kuberay">Install KubeRay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../GenAIInfra/scripts/ray/README.html#start-ray-cluster-with-autoscaling">Start Ray Cluster with Autoscaling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../GenAIInfra/scripts/ray/README.html#delete-ray-cluster-with-autoscaling">Delete Ray Cluster with Autoscaling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../GenAIInfra/scripts/ray/README.html#uninstall-kuberay">Uninstall KubeRay</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../../GenAIInfra/helm-charts/common/asr/README.html">asr</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../GenAIInfra/helm-charts/common/asr/README.html#option1-installing-the-chart-separately">(Option1): Installing the chart separately:</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../GenAIInfra/helm-charts/common/asr/README.html#option2-installing-the-chart-with-dependencies-automatically">(Option2): Installing the chart with dependencies automatically:</a></li>
@@ -1336,13 +1457,20 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../GenAIInfra/helm-charts/common/whisper/README.html#values">Values</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../GenAIInfra/manifests/CodeGen/gaudi/README.html">Deploy Services</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../GenAIInfra/manifests/CodeGen/gaudi/README.html#verify-services">Verify Services</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../GenAIInfra/manifests/CodeGen/xeon/README.html">Deploy Services</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../GenAIInfra/manifests/CodeGen/xeon/README.html#verify-services">Verify Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../GenAIInfra/manifests/CodeGen/gaudi/README.html">Deploy CodeGen in Kubernetes Cluster on Xeon</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../GenAIInfra/manifests/CodeGen/gaudi/README.html#deploy-services">Deploy Services</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../GenAIInfra/manifests/CodeGen/gaudi/README.html#verify-services">Verify Services</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../GenAIInfra/manifests/CodeGen/xeon/README.html">Deploy CodeGen in Kubernetes Cluster on Xeon</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../GenAIInfra/manifests/CodeGen/xeon/README.html#deploy-services">Deploy Services</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../GenAIInfra/manifests/CodeGen/xeon/README.html#verify-services">Verify Services</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../../GenAIInfra/microservices-connector/config/authN-authZ/README.html">Use GMC and Istio to compose an OPEA Pipeline with authentication and authorization enabled</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../GenAIInfra/microservices-connector/config/authN-authZ/README.html#prerequisite">Prerequisite</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../GenAIInfra/microservices-connector/config/authN-authZ/README.html#perform-authentication-and-authorization-via-bearer-jwt-tokens">Perform authentication and authorization via bearer JWT tokens</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../GenAIInfra/microservices-connector/config/authN-authZ/README.html#perform-authentication-and-authorization-via-fake-jwt-tokens">Perform authentication and authorization via fake JWT tokens</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../GenAIInfra/microservices-connector/config/authN-authZ/README.html#perform-authentication-and-authorization-via-jwt-tokens-generated-by-keycloak">Perform authentication and authorization via JWT tokens generated by Keycloak</a></li>
 </ul>
 </li>
 </ul>
@@ -1496,7 +1624,7 @@
   
      <li><a href="../../../GenAIExamples.html">Generative AI Examples</a> &raquo;</li>
   
-  <li>Deploy the RAG application</li>
+  <li>Deploy CodeTrans in a Kubernetes Cluster</li>
 
       <li class="wy-breadcrumbs-aside">
             <a href="../../../_sources/GenAIExamples/CodeTrans/kubernetes/README.md.txt" rel="nofollow"> View page source</a>
@@ -1516,48 +1644,47 @@
   
            <div itemprop="articleBody">
              
-  <h1 align="center" id="title">Deploy CodeTrans in a Kubernetes Cluster</h1>
+  <section id="deploy-codetrans-in-a-kubernetes-cluster">
+<h1>Deploy CodeTrans in a Kubernetes Cluster<a class="headerlink" href="#deploy-codetrans-in-a-kubernetes-cluster" title="Link to this heading">¶</a></h1>
 <p>This document outlines the deployment process for a Code Translation (CodeTran) application that utilizes the <a class="reference external" href="https://github.com/opea-project/GenAIComps.git">GenAIComps</a> microservice components on Intel Xeon servers and Gaudi machines.</p>
 <p>Please install GMC in your Kubernetes cluster, if you have not already done so, by following the steps in Section “Getting Started” at <a class="reference external" href="https://github.com/opea-project/GenAIInfra/tree/main/microservices-connector#readme">GMC Install</a>. We will soon publish images to Docker Hub, at which point no builds will be required, further simplifying install.</p>
 <p>If you have only Intel Xeon machines you could use the codetrans_xeon.yaml file or if you have a Gaudi cluster you could use codetrans_gaudi.yaml
 In the below example we illustrate on Xeon.</p>
 <section id="deploy-the-rag-application">
-<h1>Deploy the RAG application<a class="headerlink" href="#deploy-the-rag-application" title="Link to this heading">¶</a></h1>
-<ol class="arabic simple">
-<li><p>Create the desired namespace if it does not already exist and deploy the application</p></li>
-</ol>
+<h2>Deploy the RAG application<a class="headerlink" href="#deploy-the-rag-application" title="Link to this heading">¶</a></h2>
+<ol class="arabic">
+<li><p>Create the desired namespace if it does not already exist and deploy the application</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">APP_NAMESPACE</span><span class="o">=</span>CT
 kubectl<span class="w"> </span>create<span class="w"> </span>ns<span class="w"> </span><span class="nv">$APP_NAMESPACE</span>
 sed<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;s|namespace: codetrans|namespace: </span><span class="nv">$APP_NAMESPACE</span><span class="s2">|g&quot;</span><span class="w">  </span>./codetrans_xeon.yaml
 kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>./codetrans_xeon.yaml
 </pre></div>
 </div>
-<ol class="arabic simple" start="2">
-<li><p>Check if the application is up and ready</p></li>
-</ol>
+</li>
+<li><p>Check if the application is up and ready</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>-n<span class="w"> </span><span class="nv">$APP_NAMESPACE</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="3">
-<li><p>Deploy a client pod for testing</p></li>
-</ol>
+</li>
+<li><p>Deploy a client pod for testing</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>create<span class="w"> </span>deployment<span class="w"> </span>client-test<span class="w"> </span>-n<span class="w"> </span><span class="nv">$APP_NAMESPACE</span><span class="w"> </span>--image<span class="o">=</span>python:3.8.13<span class="w"> </span>--<span class="w"> </span>sleep<span class="w"> </span>infinity
 </pre></div>
 </div>
-<ol class="arabic simple" start="4">
-<li><p>Check that client pod is ready</p></li>
-</ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>-n<span class="w"> </span><span class="nv">$APP_NAMESPACE</span>
+</li>
+<li><p>Check that client pod is ready</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>-n<span class="w"> </span><span class="nv">$APP_NAMESPACE</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="5">
-<li><p>Send request to application</p></li>
-</ol>
+</li>
+<li><p>Send request to application</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">CLIENT_POD</span><span class="o">=</span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span>pod<span class="w"> </span>-n<span class="w"> </span><span class="nv">$APP_NAMESPACE</span><span class="w"> </span>-l<span class="w"> </span><span class="nv">app</span><span class="o">=</span>client-test<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">={</span>.items..metadata.name<span class="o">}</span><span class="k">)</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">accessUrl</span><span class="o">=</span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span>gmc<span class="w"> </span>-n<span class="w"> </span><span class="nv">$APP_NAMESPACE</span><span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s2">&quot;{.items[?(@.metadata.name==&#39;codetrans&#39;)].status.accessUrl}&quot;</span><span class="k">)</span>
 kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$CLIENT_POD</span><span class="s2">&quot;</span><span class="w"> </span>-n<span class="w"> </span><span class="nv">$APP_NAMESPACE</span><span class="w"> </span>--<span class="w"> </span>curl<span class="w"> </span><span class="nv">$accessUrl</span><span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;language_from&quot;: &quot;Golang&quot;,&quot;language_to&quot;: &quot;Python&quot;,&quot;source_code&quot;: &quot;package main\n\nimport \&quot;fmt\&quot;\nfunc main() {\n    fmt.Println(\&quot;Hello, World!\&quot;);\n}&quot;}&#39;</span><span class="w"> </span>-H<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span>&gt;<span class="w"> </span><span class="nv">$LOG_PATH</span>/gmc_codetrans.log
 </pre></div>
 </div>
+</li>
+</ol>
+</section>
 </section>
 
 
@@ -1574,8 +1701,8 @@ kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </sp
   <div role="contentinfo">
     <p>&#169; Copyright 2024-2024 OPEA™, a Series of LF Projects, LLC.
 
-<!-- span class="lastupdated">Last updated on Jul 24, 2024. Published on </span -->
-<span class="lastupdated">Published on Jul 24, 2024.</span>
+<!-- span class="lastupdated">Last updated on Jul 25, 2024. Published on </span -->
+<span class="lastupdated">Published on Jul 25, 2024.</span>
 
   </div>
 
