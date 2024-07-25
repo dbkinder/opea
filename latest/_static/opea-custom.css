@@ -77,12 +77,12 @@ div.non-compliant-code div.highlight {
     color: rgba(255,255,255,1);
 }
 
-/* left-nav colors */
+/* left-nav toctree caption style */
 .wy-menu-vertical p.caption {
-    color: #FF6900 !important;
-    font-size: 100% !important;
-    margin: 0.5em 0 0.5em 0 !important;
-    padding: 0 0 0 0.5em !important;
+    color: #FF6900 ;
+    font-size: 100% ;
+    margin: 0 0 1em 0 ;
+    padding: 0 0 0 0.5em ;
 }
 
 /* squish the space between a paragraph before a list but not in a note */
