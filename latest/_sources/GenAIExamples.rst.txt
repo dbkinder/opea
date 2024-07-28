@@ -46,6 +46,7 @@ Code Generation Application
    GenAIExamples/CodeGen/*/*
    GenAIExamples/CodeGen/*/*/*
    GenAIExamples/CodeGen/*/*/*/*
+   GenAIExamples/CodeGen/*/*/*/*/*
 
 Code Translation Application
 ****************************
@@ -70,6 +71,20 @@ Document Summarization Application
    GenAIExamples/DocSum/*/*
    GenAIExamples/DocSum/*/*/*
    GenAIExamples/DocSum/*/*/*/*
+   GenAIExamples/DocSum/*/*/*/*/*
+
+FaqGen Application
+*********************
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   GenAIExamples/FaqGen/*
+   GenAIExamples/FaqGen/*/*
+   GenAIExamples/FaqGen/*/*/*
+   GenAIExamples/FaqGen/*/*/*/*
+   GenAIExamples/FaqGen/*/*/*/*/*
 
 SearchQnA Application
 *********************

@@ -1,4 +1,4 @@
-# RFC 24-05-16-OPEA-001: Overall Design
+# 24-05-16 OPEA-001 Overall Design
 
 ## Author
 
@@ -38,12 +38,10 @@ This RFC is used to present the OPEA overall design philosophy, including overal
 
 The proposed overall architecture is
 
-<a target="_blank" href="opea_architecture.png">
-  <img src="opea_architecture.png" alt="Architecture" width=480 height=480>
-</a>
+![OPEA Architecture](opea_architecture.png "OPEA Architecture")
 
 1. GenAIComps
-   
+
     The suite of microservices, leveraging a service composer to assemble a mega-service tailored for real-world Enterprise AI applications.
 
 2. GenAIExamples
@@ -60,9 +58,7 @@ The proposed overall architecture is
 
 The proposed OPEA workflow is
 
-<a target="_blank" href="opea_workflow.png">
-  <img src="opea_workflow.png" alt="Workflow" width=480 height=310>
-</a>
+![OPEA Workflow](opea_workflow.png "OPEA Workflow")
 
 1. Microservice
 
@@ -93,3 +89,5 @@ n/a
   - [ ] static cloud resource allocator vs dynamic cloud resource allocator
   - [ ] open telemetry support
   - [ ] authentication and trusted env
+
+

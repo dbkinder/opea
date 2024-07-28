@@ -1,4 +1,4 @@
-# RFC 24-05-15-GenAIExamples-001: Using MicroService to Implement ChatQnA
+# 24-05-16 GenAIExamples-001 Using MicroService to Implement ChatQnA
 
 ## Author
 [lvliang-intel](https://github.com/lvliang-intel), [ftian1](https://github.com/ftian1), [hshen14](https://github.com/hshen14), [Spycsh](https://github.com/Spycsh), [letonghan](https://github.com/letonghan)
@@ -223,3 +223,4 @@ Potential incompatible interface or workflow changes may include adjustments nee
 Performance Impact: The microservice architecture may impact performance metrics, depending on factors such as network latency. But for large-scale user access, scaling out microservices can enhance responsiveness, thereby significantly improving performance compared to monolithic designs.
 
 By adopting this microservice architecture for RAG, we aim to enhance the flexibility, scalability, and maintainability of the Enterprise AI application deployment, ultimately improving the user experience and facilitating future development and enhancements.
+

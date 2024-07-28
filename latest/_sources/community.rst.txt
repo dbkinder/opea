@@ -8,5 +8,6 @@ Community
    :maxdepth: 1
    :glob:
 
+   codeowner
    rfcs
    community/*

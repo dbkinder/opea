@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Index &mdash; OPEA™ 0.7 documentation</title>
+  <title>Index &mdash; OPEA™ 0.8 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=fd3f3429" />
@@ -18,7 +18,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=48f8e935"></script>
+        <script src="_static/documentation_options.js?v=a0e24af7"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/opea-custom.js?v=22d49862"></script>
@@ -151,8 +151,9 @@
 <li class="toctree-l3"><a class="reference internal" href="guide/installation/k8s_install/k8s_install_kubespray.html#prerequisites">Prerequisites</a></li>
 <li class="toctree-l3"><a class="reference internal" href="guide/installation/k8s_install/k8s_install_kubespray.html#step-1-set-up-kubespray-and-ansible">Step 1. Set up Kubespray and Ansible</a></li>
 <li class="toctree-l3"><a class="reference internal" href="guide/installation/k8s_install/k8s_install_kubespray.html#step-2-build-your-own-inventory">Step 2. Build your own inventory</a></li>
-<li class="toctree-l3"><a class="reference internal" href="guide/installation/k8s_install/k8s_install_kubespray.html#step-3-deploy-kubernetes">Step 3. Deploy Kubernetes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="guide/installation/k8s_install/k8s_install_kubespray.html#step-4-create-kubectl-configuration">Step 4. Create kubectl configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="guide/installation/k8s_install/k8s_install_kubespray.html#step-3-define-kubernetes-configuration">Step 3. Define Kubernetes configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="guide/installation/k8s_install/k8s_install_kubespray.html#step-4-deploy-kubernetes">Step 4. Deploy Kubernetes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="guide/installation/k8s_install/k8s_install_kubespray.html#step-5-create-kubectl-configuration">Step 5. Create kubectl configuration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="guide/installation/k8s_install/k8s_install_kubespray.html#quick-reference">Quick reference</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="guide/installation/k8s_install/k8s_install_kubespray.html#how-to-deploy-a-single-node-kubernetes">How to deploy a single node Kubernetes?</a></li>
 <li class="toctree-l4"><a class="reference internal" href="guide/installation/k8s_install/k8s_install_kubespray.html#how-to-scale-kubernetes-cluster-to-add-more-nodes">How to scale Kubernetes cluster to add more nodes?</a></li>
@@ -224,6 +225,9 @@
 <li class="toctree-l3"><a class="reference internal" href="GenAIExamples/LEGAL_INFORMATION.html#citation">Citation</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="GenAIExamples/docker_images_list.html">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GenAIExamples/docker_images_list.html#example-images">Example images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GenAIExamples/docker_images_list.html#microservice-images">Microservice images</a></li>
 <li class="toctree-l2"><a class="reference internal" href="GenAIExamples.html#audioqna-application">AudioQnA Application</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="GenAIExamples/AudioQnA/docker/gaudi/README.html">Build Mega Service of AudioQnA on Gaudi</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="GenAIExamples/AudioQnA/docker/gaudi/README.html#build-docker-images">🚀 Build Docker images</a></li>
@@ -264,6 +268,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="GenAIExamples/ChatQnA/README.html#consume-chatqna-service">Consume ChatQnA Service</a></li>
 <li class="toctree-l3"><a class="reference internal" href="GenAIExamples/ChatQnA/README.html#troubleshooting">Troubleshooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIExamples/ChatQnA/README.html#monitoring-opea-service-with-prometheus-and-grafana-dashboard">Monitoring OPEA Service with Prometheus and Grafana dashboard</a></li>
 <li class="toctree-l3"><a class="reference internal" href="GenAIExamples/ChatQnA/kubernetes/README.html">Deploy ChatQnA in Kubernetes Cluster on Xeon and Gaudi</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="GenAIExamples/ChatQnA/kubernetes/README.html#using-prebuilt-images">Using prebuilt images</a></li>
 <li class="toctree-l4"><a class="reference internal" href="GenAIExamples/ChatQnA/kubernetes/README.html#deploy-chatqna-pipeline">Deploy ChatQnA pipeline</a></li>
@@ -387,6 +392,11 @@
 <li class="toctree-l4"><a class="reference internal" href="GenAIExamples/CodeGen/docker/ui/svelte/README.html#get-it-running">🛠️ Get it Running</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIExamples/CodeGen/kubernetes/manifests/xeon/ui/README.html">Deploy CodeGen with ReactUI</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/CodeGen/kubernetes/manifests/xeon/ui/README.html#prerequisites-for-deploying-codegen-with-reactui">Prerequisites for Deploying CodeGen with ReactUI:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/CodeGen/kubernetes/manifests/xeon/ui/README.html#verify-services">Verify Services:</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="GenAIExamples.html#code-translation-application">Code Translation Application</a><ul>
@@ -453,7 +463,8 @@
 <li class="toctree-l4"><a class="reference internal" href="GenAIExamples/DocSum/docker/gaudi/README.html#build-docker-images">🚀 Build Docker Images</a></li>
 <li class="toctree-l4"><a class="reference internal" href="GenAIExamples/DocSum/docker/gaudi/README.html#start-microservices-and-megaservice">🚀 Start Microservices and MegaService</a></li>
 <li class="toctree-l4"><a class="reference internal" href="GenAIExamples/DocSum/docker/gaudi/README.html#enable-langsmith-to-monitor-an-application-optional">Enable LangSmith to Monitor an Application (Optional)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/DocSum/docker/gaudi/README.html#launch-the-ui">🚀 Launch the UI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/DocSum/docker/gaudi/README.html#launch-the-svelte-ui">🚀 Launch the Svelte UI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/DocSum/docker/gaudi/README.html#launch-the-react-ui">🚀 Launch the React UI</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="GenAIExamples/DocSum/docker/xeon/README.html">Build Mega Service of Document Summarization on Intel Xeon Processor</a><ul>
@@ -470,10 +481,70 @@
 <li class="toctree-l4"><a class="reference internal" href="GenAIExamples/DocSum/kubernetes/manifests/README.html#verify-services">Verify Services</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIExamples/DocSum/docker/ui/react/README.html">Doc Summary React</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/DocSum/docker/ui/react/README.html#project-screenshots">📸 Project Screenshots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/DocSum/docker/ui/react/README.html#features">🧐 Features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/DocSum/docker/ui/react/README.html#get-it-running">🛠️ Get it Running</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="GenAIExamples/DocSum/docker/ui/svelte/README.html">Doc Summary</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="GenAIExamples/DocSum/docker/ui/svelte/README.html#project-screenshots">📸 Project Screenshots</a></li>
 <li class="toctree-l4"><a class="reference internal" href="GenAIExamples/DocSum/docker/ui/svelte/README.html#features">🧐 Features</a></li>
 <li class="toctree-l4"><a class="reference internal" href="GenAIExamples/DocSum/docker/ui/svelte/README.html#get-it-running">🛠️ Get it Running</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIExamples/DocSum/kubernetes/manifests/xeon/ui/README.html">Deploy DocSum with ReactUI</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/DocSum/kubernetes/manifests/xeon/ui/README.html#prerequisites-for-deploying-docsum-with-reactui">Prerequisites for Deploying DocSum with ReactUI:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/DocSum/kubernetes/manifests/xeon/ui/README.html#verify-services">Verify Services:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="GenAIExamples.html#faqgen-application">FaqGen Application</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="GenAIExamples/FaqGen/README.html">FAQ Generation Application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIExamples/FaqGen/README.html#deploy-faq-generation-service">Deploy FAQ Generation Service</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/FaqGen/README.html#deploy-faq-generation-on-gaudi">Deploy FAQ Generation on Gaudi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/FaqGen/README.html#deploy-faq-generation-on-xeon">Deploy FAQ Generation on Xeon</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIExamples/FaqGen/docker/gaudi/README.html">Build MegaService of FAQ Generation on Gaudi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/FaqGen/docker/gaudi/README.html#build-docker-images">🚀 Build Docker Images</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/FaqGen/docker/gaudi/README.html#start-microservices-and-megaservice">🚀 Start Microservices and MegaService</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/FaqGen/docker/gaudi/README.html#enable-langsmith-to-monitor-an-application-optional">Enable LangSmith to Monitor an Application (Optional)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/FaqGen/docker/gaudi/README.html#launch-the-ui">🚀 Launch the UI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/FaqGen/docker/gaudi/README.html#launch-the-react-ui-optional">🚀 Launch the React UI (Optional)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIExamples/FaqGen/docker/xeon/README.html">Build Mega Service of FAQ Generation on Intel Xeon Processor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/FaqGen/docker/xeon/README.html#apply-intel-xeon-server-on-aws">🚀 Apply Intel Xeon Server on AWS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/FaqGen/docker/xeon/README.html#build-docker-images">🚀 Build Docker Images</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/FaqGen/docker/xeon/README.html#start-microservices-and-megaservice">🚀 Start Microservices and MegaService</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/FaqGen/docker/xeon/README.html#enable-langsmith-to-monitor-an-application-optional">Enable LangSmith to Monitor an Application (Optional)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/FaqGen/docker/xeon/README.html#launch-the-ui">🚀 Launch the UI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/FaqGen/docker/xeon/README.html#launch-the-react-ui-optional">🚀 Launch the React UI (Optional)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIExamples/FaqGen/kubernetes/manifests/README.html">Deploy FaqGen in Kubernetes Cluster</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/FaqGen/kubernetes/manifests/README.html#deploy-on-xeon">Deploy On Xeon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/FaqGen/kubernetes/manifests/README.html#deploy-on-gaudi">Deploy On Gaudi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/FaqGen/kubernetes/manifests/README.html#verify-services">Verify Services</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIExamples/FaqGen/docker/ui/react/README.html">Doc Summary React</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/FaqGen/docker/ui/react/README.html#project-screenshots">📸 Project Screenshots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/FaqGen/docker/ui/react/README.html#features">🧐 Features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/FaqGen/docker/ui/react/README.html#get-it-running">🛠️ Get it Running</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIExamples/FaqGen/docker/ui/svelte/README.html">FAQ Generation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/FaqGen/docker/ui/svelte/README.html#project-screenshots">📸 Project Screenshots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/FaqGen/docker/ui/svelte/README.html#features">🧐 Features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/FaqGen/docker/ui/svelte/README.html#get-it-running">🛠️ Get it Running</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIExamples/FaqGen/kubernetes/manifests/xeon/ui/README.html">Deploy FaqGen with ReactUI</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/FaqGen/kubernetes/manifests/xeon/ui/README.html#prerequisites-for-deploying-faqgen-with-reactui">Prerequisites for Deploying FaqGen with ReactUI:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GenAIExamples/FaqGen/kubernetes/manifests/xeon/ui/README.html#verify-services">Verify Services:</a></li>
 </ul>
 </li>
 </ul>
@@ -1236,6 +1307,50 @@
 <li class="toctree-l3"><a class="reference internal" href="GenAIEval/LEGAL_INFORMATION.html#citation">Citation</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="GenAIEval/evals/benchmark/README.html">Stress Test Script</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="GenAIEval/evals/benchmark/README.html#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIEval/evals/benchmark/README.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIEval/evals/benchmark/README.html#installation">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIEval/evals/benchmark/README.html#usage">Usage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="GenAIEval/evals/benchmark/README.html#example-commands">Example Commands</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GenAIEval/evals/benchmark/README.html#running-the-test">Running the Test</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GenAIEval/evals/benchmark/README.html#output">Output</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIEval/evals/benchmark/README.html#notes">Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIEval/evals/benchmark/README.html#logging">Logging</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="GenAIEval/evals/benchmark/grafana/README.html">Setup Prometheus and Grafana to visualize microservice metrics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="GenAIEval/evals/benchmark/grafana/README.html#setup-prometheus">1. Setup Prometheus</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="GenAIEval/evals/benchmark/grafana/README.html#setup-grafana">2. Setup Grafana</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GenAIEval/evals/evaluation/rag_eval/README.html">CRUD-RAG</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="GenAIEval/evals/evaluation/rag_eval/README.html#prerequisite">Prerequisite</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="GenAIEval/evals/evaluation/rag_eval/README.html#environment">Environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GenAIEval/evals/evaluation/rag_eval/README.html#prepare-dataset">Prepare Dataset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GenAIEval/evals/evaluation/rag_eval/README.html#launch-service-of-rag-system">Launch Service of RAG System</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIEval/evals/evaluation/rag_eval/README.html#evaluation">Evaluation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIEval/evals/evaluation/rag_eval/README.html#acknowledgements">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="GenAIEval/evals/metrics/bleu/README.html">Metric Card for BLEU</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="GenAIEval/evals/metrics/bleu/README.html#metric-description">Metric Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIEval/evals/metrics/bleu/README.html#intended-uses">Intended Uses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIEval/evals/metrics/bleu/README.html#how-to-use">How to Use</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="GenAIEval/evals/metrics/bleu/README.html#inputs">Inputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GenAIEval/evals/metrics/bleu/README.html#output-values">Output Values</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GenAIEval/evals/metrics/bleu/README.html#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIEval/evals/metrics/bleu/README.html#limitations-and-bias">Limitations and Bias</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIEval/evals/metrics/bleu/README.html#citation">Citation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GenAIEval/evals/metrics/bleu/README.html#further-references">Further References</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="GenAIEval/evals/evaluation/autorag/evaluation/README.html">AutoRAG to evaluate the RAG system performance</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="GenAIEval/evals/evaluation/autorag/evaluation/README.html#service-preparation">Service preparation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="GenAIEval/evals/evaluation/autorag/evaluation/README.html#rag-evaluation">RAG evaluation</a></li>
@@ -1329,35 +1444,6 @@
 <li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/docsum/README.html#installing-the-chart">Installing the Chart</a></li>
 <li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/docsum/README.html#verify">Verify</a></li>
 <li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/docsum/README.html#values">Values</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="GenAIInfra/manifests/ChatQnA/README.html">Deploy ChatQnA in Kubernetes Cluster on Xeon</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/manifests/ChatQnA/README.html#prebuilt-images">Prebuilt images</a></li>
-<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/manifests/ChatQnA/README.html#deploy-services-with-xeon">Deploy Services with Xeon</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="GenAIInfra/manifests/ChatQnA/README.html#deploy">Deploy</a></li>
-<li class="toctree-l4"><a class="reference internal" href="GenAIInfra/manifests/ChatQnA/README.html#undeploy">Undeploy</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/manifests/ChatQnA/README.html#deploy-services-with-gaudi">Deploy Services with Gaudi</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="GenAIInfra/manifests/ChatQnA/README.html#id1">Deploy</a></li>
-<li class="toctree-l4"><a class="reference internal" href="GenAIInfra/manifests/ChatQnA/README.html#id2">Undeploy</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/manifests/ChatQnA/README.html#verify-services">Verify Services</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="GenAIInfra/manifests/CodeTrans/README.html">Deploy CodeTrans llm-uservice in Kubernetes Cluster</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/manifests/CodeTrans/README.html#deploy-on-xeon">Deploy On Xeon</a></li>
-<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/manifests/CodeTrans/README.html#deploy-on-gaudi">Deploy On Gaudi</a></li>
-<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/manifests/CodeTrans/README.html#verify-llm-services">Verify llm Services</a></li>
-<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/manifests/CodeTrans/README.html#generate-the-llm-file-from-helm-chart">Generate the llm file from helm chart</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="GenAIInfra/manifests/DocSum/README.html">Deploy DocSum llm-uservice in Kubernetes Cluster</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/manifests/DocSum/README.html#deploy-on-xeon">Deploy On Xeon</a></li>
-<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/manifests/DocSum/README.html#deploy-on-gaudi">Deploy On Gaudi</a></li>
-<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/manifests/DocSum/README.html#verify-llm-services">Verify llm Services</a></li>
-<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/manifests/DocSum/README.html#generate-the-llm-file-from-helm-chart">Generate the llm file from helm chart</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="GenAIInfra/scripts/ray/README.html">Deploy Autoscaling Ray Cluster with KubeRay in Kubernetes Cluster</a><ul>
@@ -1457,16 +1543,6 @@
 <li class="toctree-l3"><a class="reference internal" href="GenAIInfra/helm-charts/common/whisper/README.html#values">Values</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="GenAIInfra/manifests/CodeGen/gaudi/README.html">Deploy CodeGen in Kubernetes Cluster on Xeon</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/manifests/CodeGen/gaudi/README.html#deploy-services">Deploy Services</a></li>
-<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/manifests/CodeGen/gaudi/README.html#verify-services">Verify Services</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="GenAIInfra/manifests/CodeGen/xeon/README.html">Deploy CodeGen in Kubernetes Cluster on Xeon</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/manifests/CodeGen/xeon/README.html#deploy-services">Deploy Services</a></li>
-<li class="toctree-l3"><a class="reference internal" href="GenAIInfra/manifests/CodeGen/xeon/README.html#verify-services">Verify Services</a></li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="GenAIInfra/microservices-connector/config/authN-authZ/README.html">Use GMC and Istio to compose an OPEA Pipeline with authentication and authorization enabled</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="GenAIInfra/microservices-connector/config/authN-authZ/README.html#prerequisite">Prerequisite</a></li>
 <li class="toctree-l3"><a class="reference internal" href="GenAIInfra/microservices-connector/config/authN-authZ/README.html#perform-authentication-and-authorization-via-fake-jwt-tokens">Perform authentication and authorization via fake JWT tokens</a></li>
@@ -1479,8 +1555,16 @@
 <p class="caption" role="heading"><span class="caption-text">COMMUNITY</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="community.html">Community</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="codeowner.html">OPEA Project Code Owners</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="codeowner.html#genaiexamples">GenAIExamples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="codeowner.html#genaicomps">GenAIComps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="codeowner.html#genaieval">GenAIEval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="codeowner.html#genaiinfra">GenAIInfra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="codeowner.html#cicd">CICD</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="rfcs.html">Request for Comments (RFCs)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="community/rfcs/24-05-16-GenAIExamples-001-Using_MicroService_to_implement_ChatQnA.html">RFC 24-05-15-GenAIExamples-001: Using MicroService to Implement ChatQnA</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="community/rfcs/24-05-16-GenAIExamples-001-Using_MicroService_to_implement_ChatQnA.html">24-05-16 GenAIExamples-001 Using MicroService to Implement ChatQnA</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="community/rfcs/24-05-16-GenAIExamples-001-Using_MicroService_to_implement_ChatQnA.html#author">Author</a></li>
 <li class="toctree-l4"><a class="reference internal" href="community/rfcs/24-05-16-GenAIExamples-001-Using_MicroService_to_implement_ChatQnA.html#status">Status</a></li>
 <li class="toctree-l4"><a class="reference internal" href="community/rfcs/24-05-16-GenAIExamples-001-Using_MicroService_to_implement_ChatQnA.html#objective">Objective</a></li>
@@ -1491,7 +1575,7 @@
 <li class="toctree-l4"><a class="reference internal" href="community/rfcs/24-05-16-GenAIExamples-001-Using_MicroService_to_implement_ChatQnA.html#miscs">Miscs</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="community/rfcs/24-05-16-OPEA-001-Overall-Design.html">RFC 24-05-16-OPEA-001: Overall Design</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="community/rfcs/24-05-16-OPEA-001-Overall-Design.html">24-05-16 OPEA-001 Overall Design</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="community/rfcs/24-05-16-OPEA-001-Overall-Design.html#author">Author</a></li>
 <li class="toctree-l4"><a class="reference internal" href="community/rfcs/24-05-16-OPEA-001-Overall-Design.html#status">Status</a></li>
 <li class="toctree-l4"><a class="reference internal" href="community/rfcs/24-05-16-OPEA-001-Overall-Design.html#objective">Objective</a></li>
@@ -1502,7 +1586,7 @@
 <li class="toctree-l4"><a class="reference internal" href="community/rfcs/24-05-16-OPEA-001-Overall-Design.html#miscs">Miscs</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="community/rfcs/24-05-24-OPEA-001-Code-Structure.html">RFC 24-05-24-OPEA-001: Code Structure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="community/rfcs/24-05-24-OPEA-001-Code-Structure.html">24-05-24 OPEA-001 Code Structure</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="community/rfcs/24-05-24-OPEA-001-Code-Structure.html#author">Author</a></li>
 <li class="toctree-l4"><a class="reference internal" href="community/rfcs/24-05-24-OPEA-001-Code-Structure.html#status">Status</a></li>
 <li class="toctree-l4"><a class="reference internal" href="community/rfcs/24-05-24-OPEA-001-Code-Structure.html#objective">Objective</a></li>
@@ -1538,7 +1622,7 @@
 <li class="toctree-l3"><a class="reference internal" href="community/CONTRIBUTING.html#table-of-contents">Table of Contents</a></li>
 <li class="toctree-l3"><a class="reference internal" href="community/CONTRIBUTING.html#all-the-ways-to-contribute">All The Ways To Contribute</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="community/CONTRIBUTING.html#community-discussions">Community Discussions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="community/CONTRIBUTING.html#documentations">Documentations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="community/CONTRIBUTING.html#documentation">Documentation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="community/CONTRIBUTING.html#reporting-issues">Reporting Issues</a></li>
 <li class="toctree-l4"><a class="reference internal" href="community/CONTRIBUTING.html#proposing-new-features">Proposing New Features</a></li>
 <li class="toctree-l4"><a class="reference internal" href="community/CONTRIBUTING.html#submitting-pull-requests">Submitting Pull Requests</a></li>
@@ -1558,6 +1642,20 @@
 <li class="toctree-l3"><a class="reference internal" href="community/pull_request_template.html#type-of-change">Type of change</a></li>
 <li class="toctree-l3"><a class="reference internal" href="community/pull_request_template.html#dependencies">Dependencies</a></li>
 <li class="toctree-l3"><a class="reference internal" href="community/pull_request_template.html#tests">Tests</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="community/rfc_template.html">RFC Template</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="community/rfc_template.html#rfc-content">RFC Content</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="community/rfc_template.html#author">Author</a></li>
+<li class="toctree-l4"><a class="reference internal" href="community/rfc_template.html#status">Status</a></li>
+<li class="toctree-l4"><a class="reference internal" href="community/rfc_template.html#objective">Objective</a></li>
+<li class="toctree-l4"><a class="reference internal" href="community/rfc_template.html#motivation">Motivation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="community/rfc_template.html#design-proposal">Design Proposal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="community/rfc_template.html#alternatives-considered">Alternatives Considered</a></li>
+<li class="toctree-l4"><a class="reference internal" href="community/rfc_template.html#compatibility">Compatibility</a></li>
+<li class="toctree-l4"><a class="reference internal" href="community/rfc_template.html#miscellaneous">Miscellaneous</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1582,11 +1680,6 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Governance.html">Project Governance</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Governance/Technical_Steering_Committee_TSC_Gives_and_Gets.html">Technical Steering Committee (TSC) Gives &amp; Gets</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="Governance/Technical_Steering_Committee_TSC_Gives_and_Gets.html#tsc-member-gives">TSC Member Gives</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Governance/Technical_Steering_Committee_TSC_Gives_and_Gets.html#tsc-member-gets">TSC Member Gets</a></li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="Governance/charter.html">Technical Charter (the “Charter”) for OPEA a Series of LF Projects, LLC</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="Governance/charter.html#mission-and-scope-of-the-project">1. Mission and Scope of the Project</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Governance/charter.html#technical-steering-committee">2. Technical Steering Committee</a></li>
@@ -1659,8 +1752,8 @@
   <div role="contentinfo">
     <p>&#169; Copyright 2024-2024 OPEA™, a Series of LF Projects, LLC.
 
-<!-- span class="lastupdated">Last updated on Jul 25, 2024. Published on </span -->
-<span class="lastupdated">Published on Jul 25, 2024.</span>
+<!-- span class="lastupdated">Last updated on Jul 28, 2024. Published on </span -->
+<span class="lastupdated">Published on Jul 28, 2024.</span>
 
   </div>
 

@@ -13,7 +13,7 @@ license as a Linux Foundation Project.
 
 .. include:: README.md
    :parser: myst_parser.sphinx_
-   :start-after: # OPEA Project Important Information
+   :start-after: # OPEA Project
 
 .. toctree::
    :maxdepth: 1
