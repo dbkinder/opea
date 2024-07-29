@@ -14,4 +14,3 @@ _____
    :glob:
 
    community/rfcs/2*
-   community/rfcs/rfc_template

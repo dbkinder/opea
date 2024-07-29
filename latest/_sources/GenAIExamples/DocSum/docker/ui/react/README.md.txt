@@ -1,12 +1,12 @@
-# Doc Summary React
+<h1 align="center" id="title">Doc Summary React</h1>
 
-## 📸 Project Screenshots
+### 📸 Project Screenshots
 
 ![project-screenshot](../../../assets/img/docsum-ui-react.png)
 ![project-screenshot](../../../assets/img/docsum-ui-react-file.png)
 ![project-screenshot](../../../assets/img/docsum-ui-react-error.png)
 
-## 🧐 Features
+<h2>🧐 Features</h2>
 
 Here're some of the project's features:
 
@@ -14,7 +14,7 @@ Here're some of the project's features:
 - Summarizing Text via Pasting: Paste the text to be summarized into the text box, then click 'Generate Summary' to produce a condensed summary of the content, which will be displayed in the 'Summary' box on the right.
 - Scroll to Bottom: The summarized content will automatically scroll to the bottom.
 
-## 🛠️ Get it Running
+<h2>🛠️ Get it Running:</h2>
 
 1. Clone the repo.
 
