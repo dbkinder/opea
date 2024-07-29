@@ -241,9 +241,11 @@
 <li class="toctree-l3"><a class="reference internal" href="../GenAIExamples/LEGAL_INFORMATION.html#citation">Citation</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../GenAIExamples/docker_images_list.html">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../GenAIExamples/docker_images_list.html#example-images">Example images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../GenAIExamples/docker_images_list.html#microservice-images">Microservice images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GenAIExamples/docker_images_list.html">Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../GenAIExamples/docker_images_list.html#example-images">Example images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../GenAIExamples/docker_images_list.html#microservice-images">Microservice images</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../GenAIExamples.html#audioqna-application">AudioQnA Application</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../GenAIExamples/AudioQnA/docker/gaudi/README.html">Build Mega Service of AudioQnA on Gaudi</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../GenAIExamples/AudioQnA/docker/gaudi/README.html#build-docker-images">🚀 Build Docker images</a></li>
@@ -1820,8 +1822,18 @@ digraph docgen {
 </li>
 </ul>
 <p>Here’s the recommended folder setup for documentation contributions and
-generation:</p>
-<p>The parent <code class="docutils literal notranslate"><span class="pre">opea-project</span> <span class="pre">folder</span></code> is there to organize the cloned repos from
+generation, a parent folder called <code class="docutils literal notranslate"><span class="pre">opea-project</span></code> holds six locally cloned
+repos from the opea-project:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>opea-project
+├── docs
+├── GenAIComps
+├── GenAIEval
+├── GenAIExamples
+├── GenAIInfra
+├── Governance
+</pre></div>
+</div>
+<p>The parent <code class="docutils literal notranslate"><span class="pre">opea-project</span></code> folder is there to organize the cloned repos from
 the project.  If you have repo publishing
 rights, we’ll also be creating a publishing area later in these steps.</p>
 <p>In the following steps, you’ll create a fork of all the upstream OPEA project

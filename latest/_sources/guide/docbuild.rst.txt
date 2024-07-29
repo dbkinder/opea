@@ -50,20 +50,20 @@ You'll need ``git`` installed to get the working folders set up:
      sudo apt install git
 
 Here's the recommended folder setup for documentation contributions and
-generation:
+generation, a parent folder called ``opea-project`` holds six locally cloned
+repos from the opea-project:
 
-.. code-block: none
+.. code-block:: none
 
-   opea-project/
-      GenAIComps
-      GenAIEval
-      GenAIExamples
-      GenAIInfra
-      Governance
-      docs
+   opea-project
+   ├── docs
+   ├── GenAIComps
+   ├── GenAIEval
+   ├── GenAIExamples
+   ├── GenAIInfra
+   ├── Governance
 
-
-The parent ``opea-project folder`` is there to organize the cloned repos from
+The parent ``opea-project`` folder is there to organize the cloned repos from
 the project.  If you have repo publishing
 rights, we'll also be creating a publishing area later in these steps.
 
