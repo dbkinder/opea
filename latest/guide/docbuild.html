@@ -132,6 +132,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#documentation-presentation-theme">Documentation Presentation Theme</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#run-the-documentation-processors">Run the Documentation Processors</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#publish-content">Publish Content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#document-versioning">Document Versioning</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#filter-expected-warnings">Filter Expected Warnings</a></li>
 </ul>
 </li>
@@ -241,11 +242,9 @@
 <li class="toctree-l3"><a class="reference internal" href="../GenAIExamples/LEGAL_INFORMATION.html#citation">Citation</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../GenAIExamples/docker_images_list.html">Description</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../GenAIExamples/docker_images_list.html#example-images">Example images</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../GenAIExamples/docker_images_list.html#microservice-images">Microservice images</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="../GenAIExamples/docker_images_list.html">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GenAIExamples/docker_images_list.html#example-images">Example images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GenAIExamples/docker_images_list.html#microservice-images">Microservice images</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../GenAIExamples.html#audioqna-application">AudioQnA Application</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../GenAIExamples/AudioQnA/docker/gaudi/README.html">Build Mega Service of AudioQnA on Gaudi</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../GenAIExamples/AudioQnA/docker/gaudi/README.html#build-docker-images">🚀 Build Docker images</a></li>
@@ -1764,7 +1763,8 @@ on your local system.</p>
 <li><p><a class="reference internal" href="#documentation-presentation-theme" id="id5">Documentation Presentation Theme</a></p></li>
 <li><p><a class="reference internal" href="#run-the-documentation-processors" id="id6">Run the Documentation Processors</a></p></li>
 <li><p><a class="reference internal" href="#publish-content" id="id7">Publish Content</a></p></li>
-<li><p><a class="reference internal" href="#filter-expected-warnings" id="id8">Filter Expected Warnings</a></p></li>
+<li><p><a class="reference internal" href="#document-versioning" id="id8">Document Versioning</a></p></li>
+<li><p><a class="reference internal" href="#filter-expected-warnings" id="id9">Filter Expected Warnings</a></p></li>
 </ul>
 </nav>
 <section id="documentation-overview">
@@ -2001,8 +2001,42 @@ publishing repo.  The public site at <a class="reference external" href="https:/
 be updated by the <a class="reference external" href="https://guides.github.com/features/pages/">GitHub pages system</a>, typically within a few
 minutes.</p>
 </section>
+<section id="document-versioning">
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Document Versioning</a><a class="headerlink" href="#document-versioning" title="Link to this heading">¶</a></h2>
+<p>The <a class="reference external" href="https://opea-project.github.io">https://opea-project.github.io</a> site has a document version selector
+at the top of the left nav panel.  The contents of this version
+selector are defined in the <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> sphinx configuration file,
+specifically:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_context</span> <span class="o">=</span> <span class="p">{</span>
+   <span class="s1">&#39;current_version&#39;</span><span class="p">:</span> <span class="n">current_version</span><span class="p">,</span>
+   <span class="s1">&#39;docs_title&#39;</span><span class="p">:</span> <span class="n">docs_title</span><span class="p">,</span>
+   <span class="s1">&#39;is_release&#39;</span><span class="p">:</span> <span class="n">is_release</span><span class="p">,</span>
+<span class="hll">   <span class="s1">&#39;versions&#39;</span><span class="p">:</span> <span class="p">(</span> <span class="p">(</span><span class="s2">&quot;latest&quot;</span><span class="p">,</span> <span class="s2">&quot;/latest/&quot;</span><span class="p">),</span>
+</span><span class="hll">                 <span class="p">(</span><span class="s2">&quot;0.8&quot;</span><span class="p">,</span> <span class="s2">&quot;/0.8/&quot;</span><span class="p">),</span>
+</span>                 <span class="p">(</span><span class="s2">&quot;0.7&quot;</span><span class="p">,</span> <span class="s2">&quot;/0.7/&quot;</span><span class="p">),</span>
+               <span class="p">)</span>
+    <span class="p">}</span>
+</pre></div>
+</div>
+<p>As new versions of OPEA documentation are added, update this
+<code class="docutils literal notranslate"><span class="pre">versions</span></code> selection list to include the version number and publishing
+folder.  Note that there’s no direct selection to go to a newer version
+from an older one, without going to <code class="docutils literal notranslate"><span class="pre">latest</span></code> first.</p>
+<p>By default, documentation build and publishing both assume we’re generating
+documentation for the main branch and publishing to the <code class="docutils literal notranslate"><span class="pre">/latest/</span></code>
+area on <a class="reference external" href="https://opea-project.github.io">https://opea-project.github.io</a>. When we’re generating the
+documentation for a tagged version (e.g., 0.8), check out that version
+of all the component repos, and add some extra flags to the <code class="docutils literal notranslate"><span class="pre">make</span></code> commands:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/opan-project/docs
+git<span class="w"> </span>checkout<span class="w"> </span>v0.8
+make<span class="w"> </span>clean
+make<span class="w"> </span><span class="nv">DOC_TAG</span><span class="o">=</span>release<span class="w"> </span><span class="nv">RELEASE</span><span class="o">=</span><span class="m">0</span>.8<span class="w"> </span>html
+make<span class="w"> </span><span class="nv">DOC_TAG</span><span class="o">=</span>release<span class="w"> </span><span class="nv">RELEASE</span><span class="o">=</span><span class="m">0</span>.8<span class="w"> </span>publish
+</pre></div>
+</div>
+</section>
 <section id="filter-expected-warnings">
-<span id="filter-expected"></span><h2><a class="toc-backref" href="#id8" role="doc-backlink">Filter Expected Warnings</a><a class="headerlink" href="#filter-expected-warnings" title="Link to this heading">¶</a></h2>
+<span id="filter-expected"></span><h2><a class="toc-backref" href="#id9" role="doc-backlink">Filter Expected Warnings</a><a class="headerlink" href="#filter-expected-warnings" title="Link to this heading">¶</a></h2>
 <p>Alas, there are some known issues with the Sphinx processing that generate
 warnings.  We’ve added a post-processing filter on the output of the
 documentation build process to check for “expected” messages from the generation
@@ -2039,8 +2073,8 @@ filtering is done as part of the <code class="docutils literal notranslate"><spa
   <div role="contentinfo">
     <p>&#169; Copyright 2024-2024 OPEA™, a Series of LF Projects, LLC.
 
-<!-- span class="lastupdated">Last updated on Jul 29, 2024. Published on </span -->
-<span class="lastupdated">Published on Jul 29, 2024.</span>
+<!-- span class="lastupdated">Last updated on Jul 30, 2024. Published on </span -->
+<span class="lastupdated">Published on Jul 30, 2024.</span>
 
   </div>
 
