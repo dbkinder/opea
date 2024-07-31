@@ -9,7 +9,7 @@ Page Not Found
 
    .. image:: images/BrokenBlocks.png
       :align: left
-      :width: 320px
+      :width: 300px
 
    Sorry. The page you requested was not found on this site.
 
