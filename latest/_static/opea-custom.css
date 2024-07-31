@@ -7,7 +7,7 @@
 
 /* (temporarily) add an under development tagline to the bread crumb) */
 .wy-breadcrumbs::after {
-   content: " (Content reorganization in progress)";
+   content: " (Documentation is a work in progress)";
    background-color: #FFFACD;
    color: red;
    font-weight: bold;
