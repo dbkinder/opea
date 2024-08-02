@@ -66,6 +66,8 @@
         
           <dd><a href="/latest/">latest</a></dd>
         
+          <dd><a href="/0.1/">0.1</a></dd>
+        
       </dl>
       <dl>
         <dt>OPEA Project links</dt>
@@ -276,9 +278,7 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">ChatQnA Application</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#deploy-chatqna-service">Deploy ChatQnA Service</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#consume-chatqna-service">Consume ChatQnA Service</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#troubleshooting">Troubleshooting</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#monitoring-opea-service-with-prometheus-and-grafana-dashboard">Monitoring OPEA Service with Prometheus and Grafana dashboard</a></li>
 </ul>
 </li>
@@ -1858,9 +1858,8 @@ docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> 
 </li>
 </ol>
 </section>
-</section>
 <section id="troubleshooting">
-<h1>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading">¶</a></h1>
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading">¶</a></h2>
 <ol class="arabic">
 <li><p>If you get errors like “Access Denied”, <a class="reference external" href="https://github.com/opea-project/GenAIExamples/tree/main/ChatQnA/docker/xeon#validate-microservices">validate micro service</a> first. A simple example:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">http_proxy</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="w"> </span>curl<span class="w"> </span><span class="si">${</span><span class="nv">host_ip</span><span class="si">}</span>:6006/embed<span class="w"> </span>-X<span class="w"> </span>POST<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;inputs&quot;:&quot;What is Deep Learning?&quot;}&#39;</span><span class="w"> </span>-H<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span>
@@ -1870,6 +1869,7 @@ docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> 
 <li><p>(Docker only) If all microservices work well, check the port ${host_ip}:8888, the port may be allocated by other users, you can modify the <code class="docutils literal notranslate"><span class="pre">compose.yaml</span></code>.</p></li>
 <li><p>(Docker only) If you get errors like “The container name is in use”, change container name in <code class="docutils literal notranslate"><span class="pre">compose.yaml</span></code>.</p></li>
 </ol>
+</section>
 <section id="monitoring-opea-service-with-prometheus-and-grafana-dashboard">
 <h2>Monitoring OPEA Service with Prometheus and Grafana dashboard<a class="headerlink" href="#monitoring-opea-service-with-prometheus-and-grafana-dashboard" title="Link to this heading">¶</a></h2>
 <p>OPEA microservice deployment can easily be monitored through Grafana dashboards in conjunction with Prometheus data collection. Follow the <a class="reference internal" href="../../GenAIEval/evals/benchmark/grafana/README.html"><span class="std std-doc">README</span></a> to setup Prometheus and Grafana servers and import dashboards to monitor the OPEA service.</p>
@@ -1892,8 +1892,8 @@ docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> 
   <div role="contentinfo">
     <p>&#169; Copyright 2024 OPEA™, a Series of LF Projects, LLC.
 
-<!-- span class="lastupdated">Last updated on Jul 31, 2024. Published on </span -->
-<span class="lastupdated">Published on Jul 31, 2024.</span>
+<!-- span class="lastupdated">Last updated on Aug 02, 2024. Published on </span -->
+<span class="lastupdated">Published on Aug 02, 2024.</span>
 
   </div>
 
