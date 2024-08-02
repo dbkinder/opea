@@ -1,0 +1,17 @@
+.. _GenAIEval:
+
+Generative AI Evaluation
+########################
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   GenAIEval/README
+   GenAIEval/*
+   GenAIEval/*/*
+   GenAIEval/*/*/*
+   GenAIEval/*/*/*/*
+   GenAIEval/*/*/*/*/*
+   GenAIEval/*/*/*/*/*/*
+

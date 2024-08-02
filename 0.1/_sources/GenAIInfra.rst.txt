@@ -1,0 +1,17 @@
+.. _GenAIInfra:
+
+Generative Containerization and Cloud Native Suite
+##################################################
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   GenAIInfra/README
+   GenAIInfra/*
+   GenAIInfra/*/*
+   GenAIInfra/*/*/*
+   GenAIInfra/*/*/*/*
+   GenAIInfra/*/*/*/*/*
+   GenAIInfra/*/*/*/*/*/*
+

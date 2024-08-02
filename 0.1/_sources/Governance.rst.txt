@@ -1,0 +1,13 @@
+.. _Governance:
+
+Project Governance
+##################
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   Governance/*
+   Governance/*/*
+   Governance/*/*/*
+
